@@ -13,5 +13,5 @@ Here are some ideas to get you started:
 - ⚡ Fun fact: ...
 -->
 ![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=jockaplay&show_icons=true&theme=dark&hide_border=true)
-<img height="190em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=jockaplay&layout=compact&langs_count=7&theme=dark&hide_border=true"/>
+<img height="200em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=jockaplay&layout=compact&langs_count=7&theme=dark&hide_border=true"/>
 
