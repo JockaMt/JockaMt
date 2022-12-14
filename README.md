@@ -4,12 +4,14 @@
 Here are some ideas to get you started:
 
 -->
+Olá, sou eu, jocka.
+> Estudante de programação e aluno na Universidade Federal de Alagoas (UFAL), no curso de ciência da computação.
 
-- 🔭 I’m currently working on python
-- 🌱 I’m currently learning JavaScript
-- 🤔 I’m looking for help with back-end
-- 📫 How to reach me: jocksonmatheus@gmail.com
+- 🔭 Atualmente trabalhando com python
+- 🌱 Atualmente estudando JavaScript
+- 🤔 Procuro ajuda com back-end
+- 📫 Contato: jocksonmatheus@gmail.com
 
-![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=jockaplay&show_icons=true&theme=dark&hide_border=true)
-<img height="195em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=jockaplay&layout=compact&langs_count=7&theme=dark&hide_border=true"/>
+![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=jockaplay&hide=contribs&hide_border=true&title_color=ff1010&text_color=fff&theme=dark#gh-dark-mode-only,prs)
+[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=jockaplay&layout=compact&hide=QML&hide_border=true&title_color=ff1010&text_color=fff&theme=dark#gh-dark-mode-only)](https://github.com/anuraghazra/github-readme-stats)
 ![Snake animation](https://github.com/jockaplay/jockaplay/blob/output/github-contribution-grid-snake.svg)
