@@ -7,8 +7,8 @@ Here are some ideas to get you started:
 Olá, sou eu, Mateus.
 > Estudante de programação e aluno na Universidade Federal de Alagoas (UFAL), no curso de ciência da computação.
 
-- 🔭 Atualmente trabalhando com python
-- 🌱 Atualmente estudando JavaScript // React-Native
+- 🔭 Atualmente trabalhando com python, em pequenos projetos
+- 🌱 E estudando JavaScript // React-Native
 - 🤔 Procuro ajuda com back-end
 - 📫 Contato: jocksonmatheus@gmail.com
 
