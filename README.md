@@ -11,7 +11,6 @@ Olá, sou eu, Mateus.
 - 🌱 E estudando JavaScript // React-Native
 - 🤔 Procuro ajuda com back-end
 - 📫 Contato: jocksonmatheus@gmail.com
-
-![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=jockaplay&hide=contribs&hide_border=true&title_color=ff1010&text_color=fff&theme=dark#gh-dark-mode-only,prs)
+  
 [![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=jockaplay&layout=compact&hide=QML&hide_border=true&title_color=ff1010&text_color=fff&theme=dark#gh-dark-mode-only)](https://github.com/anuraghazra/github-readme-stats)
 ![Snake animation](https://github.com/jockaplay/jockaplay/blob/output/github-contribution-grid-snake.svg)
