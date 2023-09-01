@@ -13,4 +13,3 @@ Olá, sou eu, Mateus.
 - 📫 Contato: jocksonmatheus@gmail.com
   
 [![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=jockaplay&layout=compact&hide=QML&hide_border=true&title_color=ff1010&text_color=fff&theme=dark#gh-dark-mode-only)](https://github.com/anuraghazra/github-readme-stats)
-![Snake animation](https://github.com/jockaplay/jockaplay/blob/output/github-contribution-grid-snake.svg)
