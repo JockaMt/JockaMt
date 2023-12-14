@@ -1,10 +1,12 @@
-<div style="background-color: #555"><h1>Jockson Mateus</h1></div>
+<h1>Jockson Mateus</h1>
 
 Seja bem vindo ao meu humilde perfil.
 
 ## Sobre mim:
 
 Programador freelancer fullstack, ainda trabalhando com projetos pequenos como webscraping, automação e sites para empresas. Tenho interesse em participar de alguma empresa de software, sinto que tenho muito que aprender ainda, mas sei que já consigo acrescentar muito em uma equipe de desenvolvimento.
+
+Atualmente cursando Ciência da computação na Universidade Federal de Alagoas - UFAL
 
 ## O que esperar neste perfil:
 
