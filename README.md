@@ -1,16 +1,16 @@
 <h1>Jockson Mateus</h1>
 
-Seja bem vindo ao meu humilde perfil.
+Seja bem vindo ao meu perfil.
 
 ## Sobre mim:
 
-Programador freelancer fullstack, ainda trabalhando com projetos pequenos como webscraping, automação e sites para empresas. Tenho interesse em participar de alguma empresa de software, sinto que tenho muito que aprender ainda, mas sei que já consigo acrescentar muito em uma equipe de desenvolvimento.
+Futuro programador full cycle, trabalhando atualmente com automação e sites para empresas. Tenho interesse em participar de alguma empresa de software, sinto que tenho muito que aprender ainda, mas sei que já consigo acrescentar muito em uma equipe de desenvolvimento.
 
 Atualmente cursando Ciência da computação na Universidade Federal de Alagoas - UFAL
 
 ## O que esperar neste perfil:
 
-Neste perfil eu coloco meus projetos, desde os mais simples até o mais novo, para um melhor companhamento da minha evolução como dev. Nele é possivel encontrar os códigos do meu portifólio e alguns projetos de automação que foram usados e descartados, mas mantenho como apredizado.
+Neste perfil eu coloco meus projetos, desde os mais simples até o mais novo, para um melhor companhamento da minha evolução como dev. Nele é possivel encontrar os códigos do meu portifólio e alguns projetos de automação que foram usados em empresas em que trabalhei, mas mantenho como aperceiçoando a cada dia.
 
 ## 💻 Tech Stack:
 
