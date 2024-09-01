@@ -35,6 +35,6 @@ Neste perfil eu coloco meus projetos, desde os mais simples até o mais novo, pa
 
 ## 📊 Stats:
 
-[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=jockaplay&layout=compact&hide=QML&hide_border=true&title_color=ff1010&text_color=fff&theme=dark#gh-dark-mode-only)](https://github.com/anuraghazra/github-readme-stats)
+[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=jockamt&layout=compact&hide=QML&hide_border=true&title_color=ff1010&text_color=fff&theme=dark#gh-dark-mode-only)](https://github.com/anuraghazra/github-readme-stats)
 
 ##### Imagem de perfio por [Caio Teixeira](https://github.com/CaioXTSY)
