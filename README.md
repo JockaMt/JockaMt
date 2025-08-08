@@ -1,40 +1,107 @@
-<h1>Jockson Mateus</h1>
+<!-- Banner com destaque em vermelho -->
+<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:E53935,100:FF7043&height=180&section=header&text=Jockson%20Mateus&fontSize=40&fontColor=fff&animation=fadeIn&fontAlignY=35" />
 
-Seja bem vindo ao meu perfil.
+<p align="center">
+  <img src="https://komarev.com/ghpvc/?username=JockaMt&label=Visitantes&color=E53935&style=for-the-badge" alt="Contador de Visitantes" />
+</p>
 
-## Sobre mim:
+# 👋 Olá, eu sou o **<span style="color:red">Jockson Mateus</span>**!
 
-Futuro programador full cycle, trabalhando atualmente com automação e sites para empresas. Tenho interesse em participar de alguma empresa de software, sinto que tenho muito que aprender ainda, mas sei que já consigo acrescentar muito em uma equipe de desenvolvimento.
+💻 **<span style="color:red">Desenvolvedor Full Cycle em formação</span>** | 🚀 **Criador de soluções web e automação**  
+📚 Estudante de **<span style="color:red">Ciência da Computação</span>** na Universidade Federal de Alagoas (UFAL)  
+💡 Apaixonado por **transformar ideias em sistemas eficientes**
 
-Atualmente cursando Ciência da computação na Universidade Federal de Alagoas - UFAL
+---
 
-## O que esperar neste perfil:
+## 🚀 Sobre mim
+Atualmente, aplico minhas habilidades no desenvolvimento de **<span style="color:red">sites modernos</span>** e **<span style="color:red">projetos de automação</span>** que ajudam empresas a otimizar processos.  
+Meu objetivo é dominar **todo o ciclo de desenvolvimento** – do backend ao frontend – e criar sistemas **<span style="color:red">escaláveis e impactantes</span>**.  
 
-Neste perfil eu coloco meus projetos, desde os mais simples até o mais novo, para um melhor companhamento da minha evolução como dev. Nele é possivel encontrar os códigos do meu portifólio e alguns projetos de automação que foram usados em empresas em que trabalhei, mas mantenho como aperceiçoando a cada dia.
+💬 *"Não programo apenas para funcionar. Programo para **transformar**."*
 
-## 💻 Tech Stack:
+---
 
-<div style="display:flex;justify-content:center">
+## 🌐 Meus Sites
+- **<span style="color:red">Site Pessoal:</span>** [github.io/jockamt/landing-page](https://github.io/jockamt/landing-page)  
+- **<span style="color:red">Brilliant Software:</span>** [brilliantsoftware.com.br](https://brilliantsoftware.com.br)  
 
-![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white) 
-![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)
-![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54) 
-![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
-![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)
-![React Native](https://img.shields.io/badge/react_native-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
-![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white) 
-![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=java&logoColor=white) 
-![Bootstrap](https://img.shields.io/badge/bootstrap-%23563D7C.svg?style=for-the-badge&logo=bootstrap&logoColor=white) 
-![Flask](https://img.shields.io/badge/flask-%23000.svg?style=for-the-badge&logo=flask&logoColor=white) 
-![MongoDB](https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white) 
-![NumPy](https://img.shields.io/badge/numpy-%23013243.svg?style=for-the-badge&logo=numpy&logoColor=white) 
-![Express.js](https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB)
-![Pandas](https://img.shields.io/badge/pandas-%23150458.svg?style=for-the-badge&logo=pandas&logoColor=white) 
+---
+
+## 🏆 Meus principais projetos
+
+### 🌐 Brilliant Software — *Site Institucional*
+<div align="center">
+  <a href="https://brilliantsoftware.com.br" target="_blank">
+    <img src="https://img.shields.io/badge/🌟_Brilliant%20Software-E53935?style=for-the-badge&logo=vercel&logoColor=white" alt="Brilliant Software" />
+  </a>
+  <p>Meu <span style="color:red">portal oficial</span>, onde apresento todos os softwares da marca, incluindo vendas e suporte.</p>
+</div>
+
+---
+
+### 💻 Brilliant PDF — *Aplicativo Desktop*
+<div align="center">
+  <img src="https://img.shields.io/badge/🔥_Brilliant%20PDF-E53935?style=for-the-badge&logo=adobeacrobatreader&logoColor=white" alt="Brilliant PDF" />
+</div>
+
+**O que é:**  
+O **<span style="color:red">Brilliant PDF</span>** é um aplicativo desktop focado em produtividade, com ferramentas avançadas para **edição, conversão e manipulação de arquivos PDF**.  
+Ele é o **produto principal** da marca e está disponível para compra no [site oficial](https://brilliantsoftware.com.br).  
+
+---
+
+## 🛠️ Stack de Tecnologias
+<div align="center">
+
+![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)
+![NestJS](https://img.shields.io/badge/NestJS-E53935?style=for-the-badge&logo=nestjs&logoColor=white)
+![Django](https://img.shields.io/badge/Django-092E20?style=for-the-badge&logo=django&logoColor=white)
+![Rust](https://img.shields.io/badge/Rust-000000?style=for-the-badge&logo=rust&logoColor=white)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white)
+![React](https://img.shields.io/badge/React-20232a?style=for-the-badge&logo=react&logoColor=61dafb)
+![NodeJS](https://img.shields.io/badge/Node.js-E53935?style=for-the-badge&logo=node.js&logoColor=white)
+![React Native](https://img.shields.io/badge/React%20Native-20232a?style=for-the-badge&logo=react&logoColor=61dafb)
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=ffdd54)
+![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-E53935?style=for-the-badge&logo=tailwind-css&logoColor=white)
+![Flask](https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white)
+![Java](https://img.shields.io/badge/Java-E53935?style=for-the-badge&logo=openjdk&logoColor=white)
 
 </div>
 
-## 📊 Stats:
+---
 
-[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=jockamt&layout=compact&hide=QML&hide_border=true&title_color=ff1010&text_color=fff&theme=dark#gh-dark-mode-only)](https://github.com/anuraghazra/github-readme-stats)
+<div align="center">
+  
+## 📂 Outros Projetos
+| 💡 Projeto | 🚀 Tecnologias | 🔗 Link |
+|------------|---------------|---------|
+| **Automação de Processos Empresariais** | Python, Flask, Pandas | Privado |
+| **Site Institucional Moderno** | HTML, Tailwind, JavaScript | <a href="https://brilliantsoftware.com.br" target="_blank">Visitar</a> |
+| **API de Licenciamento de Software** | NestJS, PostgreSQL, JWT | Em breve |
 
-##### Imagem de perfio por [Caio Teixeira](https://github.com/CaioXTSY)
+</div>
+
+---
+
+## 📊 Estatísticas do GitHub
+
+<div align="center">
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://github-used-languages.vercel.app/JockaMt?theme=dark">
+  <img alt="Most Used Languages'" src="https://github-used-languages.vercel.app/JockaMt">
+</picture>
+</div>
+
+---
+
+## 📬 Vamos conversar?
+<div align="center">
+  
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-E53935?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/jockson-mateus)  
+[![Email](https://img.shields.io/badge/Email-E53935?style=for-the-badge&logo=gmail&logoColor=white)](mailto:jockson.mateus@email.com)
+
+</div>
+
+---
+
+<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:E53935,100:FF7043&height=120&section=footer" />
