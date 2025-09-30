@@ -1,0 +1,146 @@
+{
+    "projects": [
+        {
+            "name": "Brilliant Software",
+            "description": "Site institucional de uma empresa de desenvolvimento de software.",
+            "url": "https://www.brilliantsoftware.com.br/",
+            "gh": "",
+            "categories": [
+                "frontend"
+            ],
+            "technologies": [
+                "HTML",
+                "CSS",
+                "JavaScript",
+                "TypeScript"
+            ]
+        },
+        {
+            "name": "Real Maker Studio",
+            "description": "Site institucional de um estúdio de criação de jogos indie.",
+            "url": "https://realmakersitepublic-rouge.vercel.app/",
+            "gh": "",
+            "categories": [
+                "frontend"
+            ],
+            "technologies": [
+                "HTML",
+                "CSS",
+                "JavaScript",
+                "TypeScript"
+            ]
+        },
+        {
+            "name": "Login Page responsiva",
+            "description": "Página de login responsiva feita com HTML e CSS.",
+            "url": "https://responsive-login-screen.vercel.app/",
+            "gh": "https://github.com/JockaMt/fullstack-project",
+            "categories": [
+                "frontend",
+                "backend",
+                "fullstack"
+            ],
+            "technologies": [
+                "HTML",
+                "CSS",
+                "JavaScript",
+                "TypeScript"
+            ]
+        },
+        {
+            "name": "Ghost and Blocks",
+            "description": "Jogo simples feito na godot onde o jogador controla um fantasma desviando de blocos.",
+            "url": "https://jockaplay.itch.io/ghost-and-blocks",
+            "gh": "https://github.com/JockaMt/GhostAndBlocks",
+            "categories": [
+                "other"
+            ],
+            "technologies": [
+                "Godot",
+                "GDScript"
+            ]
+        },
+        {
+            "name": "Django IBGE",
+            "description": "Buscador de cidades via dados do IBGE feito com Django.",
+            "url": "",
+            "gh": "https://github.com/JockaMt/DjangoIBGE",
+            "categories": [
+                "frontend",
+                "backend",
+                "fullstack"
+            ],
+            "technologies": [
+                "HTML",
+                "CSS",
+                "JavaScript",
+                "Python",
+                "Django"
+            ]
+        },
+        {
+            "name": "Bot Discord",
+            "description": "Bot para Discord feito com javascript.",
+            "url": "",
+            "gh": "https://github.com/JockaMt/bot-discord",
+            "categories": [
+                "other"
+            ],
+            "technologies": [
+                "JavaScript"
+            ]
+        },
+        {
+            "name": "Rick and Morty",
+            "description": "Lista de personagens de Rick and Morty consumindo a API oficial.",
+            "url": "",
+            "gh": "https://github.com/JockaMt/rickandmortyapiconsumer",
+            "categories": [
+                "frontend"
+            ],
+            "technologies": [
+                "HTML",
+                "CSS",
+                "JavaScript"
+            ]
+        }
+    ],
+    "cartegories": [
+        "frontend",
+        "backend",
+        "fullstack",
+        "other"
+    ],
+    "technologies": [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "TypeScript",
+        "Python",
+        "Django",
+        "Godot",
+        "GDScript"
+    ],
+    "skills": {
+        "Frontend": [
+            { "name": "HTML", "level": 95, "icon": "https://cdn.simpleicons.org/html5" },
+            { "name": "CSS", "level": 85, "icon": "public/icons/css3.svg" },
+            { "name": "JavaScript", "level": 90, "icon": "https://cdn.simpleicons.org/javascript" },
+            { "name": "TypeScript", "level": 75, "icon": "https://cdn.simpleicons.org/typescript" },
+            { "name": "React", "level": 80, "icon": "https://cdn.simpleicons.org/react" }
+        ],
+        "Backend": [
+            { "name": "Python", "level": 90, "icon": "https://cdn.simpleicons.org/python" },
+            { "name": "Django", "level": 80, "icon": "https://cdn.simpleicons.org/django" },
+            { "name": "Java", "level": 70, "icon": "public/icons/java.svg" },
+            { "name": "Rust", "level": 60, "icon": "https://cdn.simpleicons.org/rust" }
+        ],
+        "Ferramentas": [
+            { "name": "Git", "level": 90, "icon": "https://cdn.simpleicons.org/git" },
+            { "name": "GitHub", "level": 85, "icon": "https://cdn.simpleicons.org/github" },
+            { "name": "Docker", "level": 70, "icon": "https://cdn.simpleicons.org/docker" },
+            { "name": "Node.js", "level": 80, "icon": "https://cdn.simpleicons.org/nodedotjs" },
+            { "name": "Figma", "level": 65, "icon": "https://cdn.simpleicons.org/figma" }
+        ]
+    }
+}

@@ -1,0 +1,766 @@
+/* Reset e Estilos Base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* Altura aproximada do header; ajustada em mobile abaixo */
+    --header-h: 80px;
+}
+
+html {
+    scroll-behavior: smooth;
+    /* Offset para navegação por âncoras (header sticky) */
+    scroll-padding-top: var(--header-h);
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f7f7f7;
+    font-size: 16px;
+}
+
+/* Acessibilidade */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* Focus styles for keyboard navigation */
+a:focus,
+button:focus,
+input:focus,
+textarea:focus,
+select:focus {
+    outline: 2px solid #007acc;
+    outline-offset: 2px;
+}
+
+/* Skip link for screen readers */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 6px;
+    background: #007acc;
+    color: white;
+    padding: 8px;
+    text-decoration: none;
+    z-index: 1001;
+}
+
+.skip-link:focus {
+    top: 6px;
+}
+
+/* Header */
+header {
+    background: #fff;
+    color: #333;
+    padding: 0.8rem 0;
+    /* Reduzido */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid #eaeaea;
+    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.2rem;
+    /* Reduzido */
+}
+
+header nav ul li a {
+    color: #555;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: #007acc;
+    /* Cor de destaque */
+}
+
+/* Seção Hero */
+#hero {
+    display: flex;
+    align-items: center;
+    /* Evita o header sobrepor o conteúdo em ancoragem e pequenas telas */
+    min-height: calc(100vh - var(--header-h));
+    padding: 4rem 2rem;
+    /* Reduzido */
+    background: #fff;
+    flex-wrap: wrap;
+    gap: 2rem;
+    border-bottom: 1px solid #eaeaea;
+}
+
+.hero-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.hero-content-left {
+    flex: 1;
+    min-width: 300px;
+}
+
+.hero-content-left h1 {
+    font-size: 3rem;
+    /* Reduzido */
+    color: #111;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.hero-content-left small {
+    display: flex;
+    font-size: 1.2rem;
+    color: #007acc;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.hero-subtitle {
+    display: flex;
+    font-size: 1.2rem;
+    color: #007acc;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.hero-content-left p {
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+    /* Reduzido */
+    color: #555;
+    max-width: 1200px;
+}
+
+.hero-buttons {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 1rem;
+}
+
+.hero-content-left .btn {
+    display: inline-block;
+    padding: 0.6rem 2rem;
+    background: #007acc;
+    border: 2px solid #007acc !important;
+    color: #fff;
+    text-decoration: none;
+    text-wrap: nowrap;
+    border-radius: 5px;
+    font-weight: 600;
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.hero-content-left .btn:hover {
+    background: #005f9e;
+}
+
+.hero-content-right {
+    flex: 1;
+    min-width: 300px;
+    text-align: center;
+}
+
+.hero-content-right img {
+    max-width: 100%;
+    border-radius: 100%;
+    height: 300px;
+}
+
+.btn-secondary {
+    background: transparent !important;
+    color: #007acc !important;
+    border: 2px solid #007acc !important;
+}
+
+/* Seção de Projetos */
+#projects {
+    padding: 4rem 2rem;
+    /* Reduzido */
+    background: #f7f7f7;
+}
+
+#projects h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: 2.5rem;
+    /* Reduzido */
+    color: #111;
+    font-weight: 700;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    /* Reduzido */
+    gap: 1.5rem;
+    /* Reduzido */
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.card-content p {
+    display: flex;
+}
+
+.project-card {
+    background: #fff;
+    border: 1px solid #eaeaea;
+    border-radius: 8px;
+    padding: 1.5rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+}
+
+.project-card.clickable:hover {
+    border-color: #007acc;
+}
+
+.project-card.clickable {
+    cursor: pointer;
+}
+
+.project-card h3 {
+    color: #111;
+    margin-bottom: 0.75rem;
+    font-size: 1.3rem;
+    /* Reduzido */
+}
+
+.project-card p {
+    color: #555;
+    margin-bottom: 1.5rem;
+}
+
+.card-footer {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    margin-top: auto;
+    padding-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.github-link {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.6rem 2rem;
+    background: #007acc;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 600;
+    text-align: center  ;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    width: 100%;
+}
+
+.github-link:hover {
+    background-color: #005f9e;
+}
+
+.technologies.card-footer {
+    margin-top: auto;
+    padding-top: 1rem;
+}
+
+.technologies {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.tech-badge {
+    background: #eef6fc;
+    color: #007acc;
+    padding: 0.3rem 0.8rem;
+    border-radius: 15px;
+    font-size: 0.7rem;
+    /* Reduzido */
+    font-weight: 500;
+}
+
+/* Seções Sobre e Skills */
+#about,
+#skills {
+    padding: 4rem 2rem;
+    /* Reduzido */
+    border-top: 1px solid #eaeaea;
+}
+
+#about {
+    background: #fff;
+}
+
+#about h2,
+#skills h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+    /* Reduzido */
+    color: #111;
+    font-weight: 700;
+}
+
+#about p {
+    font-size: 1.05rem;
+    /* Reduzido */
+    line-height: 1.8;
+    color: #555;
+    max-width: 800px;
+    margin: 0 auto 2.5rem auto;
+    text-align: center;
+}
+
+#about h3 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #111;
+    font-size: 1.8rem;
+}
+
+/* Skills - Badges Simples */
+.skills-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.skills-category h4 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 1.4rem;
+    color: #111;
+    font-weight: 600;
+}
+
+.skills-badges {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.skill-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: #fff;
+    border: 1px solid #eaeaea;
+    border-radius: 25px;
+    padding: 0.7rem 1.2rem;
+    font-weight: 600;
+    color: #333;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    cursor: default;
+}
+
+.skill-badge:hover {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
+    border-color: #007acc;
+}
+
+.skill-badge .tech-icon {
+    width: 20px;
+    height: 20px;
+    display: block;
+}
+
+.skill-badge .tech-icon-badge {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #eef6fc;
+    color: #007acc;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.6rem;
+    font-weight: 700;
+}
+
+
+
+/* removido o estilo antigo de estrelas */
+
+/* Filtros de Categoria */
+#category-filters {
+    display: flex;
+    justify-content: center;
+    gap: 0.8rem;
+    margin-bottom: 2.5rem;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    padding: 0.6rem 1.2rem;
+    border: 1px solid #ddd;
+    background: #fff;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 500;
+    color: #555;
+    transition: all 0.3s ease;
+}
+
+.filter-btn:hover {
+    background: #f0f0f0;
+    border-color: #ccc;
+}
+
+.filter-btn.active {
+    background: #007acc;
+    color: #fff;
+    border-color: #007acc;
+}
+
+/* Paginação */
+#pagination-container {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 1.5rem;
+}
+
+.pagination-btn {
+    padding: 0.5rem 1rem;
+    border: 1px solid #ddd;
+    background: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.pagination-btn:hover {
+    background: #f0f0f0;
+}
+
+.pagination-btn.active {
+    background: #007acc;
+    color: #fff;
+    border-color: #007acc;
+}
+
+/* Rodapé */
+footer {
+    text-align: center;
+    padding: 2rem;
+    /* Reduzido */
+    background: #fff;
+    color: #555;
+    border-top: 1px solid #eaeaea;
+}
+
+/* Footer - layout e ícones */
+.footer-inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    gap: 1.5rem;
+}
+
+.footer-contact {
+    display: flex;
+    flex-shrink: 1;
+    flex-direction: column;
+}
+
+.footer-contact nav {
+    display: flex;
+    align-items: start;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.contact-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    color: #777;
+}
+
+.contact-item a {
+    color: #555;
+    text-decoration: none;
+    transition: color .2s ease;
+}
+
+.contact-item a:hover {
+    color: #007acc;
+}
+
+.footer-icon {
+    width: 25px;
+    height: 25px;
+    display: inline-block;
+    object-fit: contain;
+    filter: grayscale(100%) brightness(0.5);
+    opacity: 0.85;
+    transition: filter .2s ease, opacity .2s ease, transform .2s ease;
+}
+
+.contact-item:hover .footer-icon {
+    filter: grayscale(0%) brightness(1);
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+.footer-copy { margin: 0; font-size: .95rem; color: #777; }
+
+/* Botão de Download CV */
+.download-cv {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+.cv-download-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: #007acc;
+    border: 2px solid #007acc;
+    color: #fff;
+    padding: 0.6rem 2rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    text-wrap: nowrap;
+}
+
+.cv-download-btn:hover {
+    background: #005f9e;
+}
+
+.cv-download-btn svg {
+    width: 18px;
+    height: 18px;
+}
+
+@media (max-width: 768px) {
+    .footer-inner { flex-direction: column; text-align: center; }
+    .footer-contact { justify-content: center; }
+    
+    .cv-download-btn {
+        padding: 0.6rem 2rem;
+        width: 100%;
+        max-width: 280px;
+    }
+    
+    .cv-download-btn svg {
+        width: 16px;
+        height: 16px;
+    }
+}
+
+.footer-contact {
+    display: flex;
+    max-width: 1200px;
+    gap: 1rem;
+}
+
+.footer-contact .contact-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #555;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.footer-contact .contact-item a {
+    color: #007acc;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-contact .contact-item:hover a {
+    color: #005f9e;
+}
+
+/* Animação de entrada (fade-in) para seções */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(16px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-section {
+    opacity: 0;
+    transform: translateY(16px);
+    will-change: opacity, transform;
+}
+
+.fade-section.visible {
+    animation: fadeInUp 0.6s ease-out both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .fade-section {
+        opacity: 1 !important;
+        transform: none !important;
+    }
+    .fade-section.visible {
+        animation: none !important;
+    }
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    :root { --header-h: 120px; }
+    body {
+        font-size: 16px;
+    }
+
+    .header-content {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    #hero {
+        flex-direction: column-reverse;
+        text-align: center;
+        /* Mais espaço no topo para não colidir com o header empilhado */
+        padding: calc(2.5rem + 8px) 1.5rem 3rem;
+        min-height: calc(92vh - var(--header-h));
+    }
+
+    .hero-content-left h1 {
+        font-size: 2.2rem;
+        /* Reduzido */
+    }
+
+    .hero-content-left small {
+        font-size: 1rem;
+        margin-bottom: 0.5rem;
+        justify-content: center;
+    }
+
+    .hero-content-left p {
+        font-size: 1rem;
+        /* Reduzido */
+    }
+
+    .hero-content-left .btn{
+        flex: 1;
+        width: 100%;
+    }
+
+    #projects,
+    #about,
+    #skills {
+        padding: 3rem 1.5rem;
+    }
+
+    #projects h2,
+    #about h2,
+    #skills h2 {
+        font-size: 2rem;
+        /* Reduzido */
+    }
+
+    /* Ajustes para badges em mobile */
+    .skills-badges {
+        gap: 0.7rem;
+    }
+
+    .skill-badge {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+    }
+
+    .skill-badge .tech-icon {
+        width: 18px;
+        height: 18px;
+    }
+
+    .skill-badge .tech-icon-badge {
+        width: 18px;
+        height: 18px;
+        font-size: 0.55rem;
+    }
+}
+
+/* Tablet */
+@media (max-width: 1024px) and (min-width: 769px) {
+    .hero-content-left .btn{
+        flex: 1;
+        width: 100%;
+    }
+    
+    /* Ajustes para badges em tablet */
+    .skills-badges {
+        gap: 0.8rem;
+    }
+
+    .skill-badge {
+        padding: 0.6rem 1.1rem;
+    }
+}
+
+/* Garante offset por seção ao usar links com # âncora */
+section { scroll-margin-top: var(--header-h); }

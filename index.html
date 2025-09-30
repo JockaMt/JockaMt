@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO Meta Tags -->
+    <title>JockaMt - Desenvolvedor Web & Freelancer | Sites Profissionais e Sistemas Sob Medida</title>
+    <meta name="description"
+        content="Desenvolvedor Web freelancer especializado em sites profissionais e sistemas sob medida. HTML, CSS, JavaScript, Python, Django. Qualidade, prazo e suporte garantidos.">
+    <meta name="keywords"
+        content="desenvolvedor web, freelancer, sites profissionais, sistemas sob medida, HTML, CSS, JavaScript, Python, Django, desenvolvimento frontend, desenvolvimento backend">
+    <meta name="author" content="JockaMt">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="JockaMt - Desenvolvedor Web & Freelancer">
+    <meta property="og:description"
+        content="Desenvolvo sites profissionais e sistemas sob medida para empresas que querem crescer. Mais clientes, processos automatizados e resultados reais.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://jockadev.vercel.app">
+    <meta property="og:image" content="https://jockadev.vercel.app/public/hero-image.jpg">
+    <meta property="og:site_name" content="JockaMt Portfolio">
+    <meta property="og:locale" content="pt_BR">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="JockaMt - Desenvolvedor Web & Freelancer">
+    <meta name="twitter:description"
+        content="Desenvolvo sites profissionais e sistemas sob medida para empresas que querem crescer.">
+    <meta name="twitter:image" content="https://jockadev.vercel.app/public/hero-image.jpg">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://jockadev.vercel.app">
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#007acc">
+
+    <!-- Preconnect for Performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://github.com">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Structured Data - JSON-LD -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "JockaMt",
+        "jobTitle": "Desenvolvedor Web",
+        "description": "Desenvolvedor Web freelancer especializado em sites profissionais e sistemas sob medida",
+        "url": "https://jockadev.vercel.app",
+        "sameAs": [
+            "https://github.com/JockaMt",
+            "https://www.linkedin.com/in/jocka-dev"
+        ],
+        "knowsAbout": [
+            "Desenvolvimento Web",
+            "JavaScript",
+            "Python",
+            "HTML",
+            "CSS",
+            "Django",
+            "TypeScript",
+            "Frontend Development",
+            "Backend Development"
+        ],
+        "offers": {
+            "@type": "Service",
+            "name": "Desenvolvimento de Sites Profissionais",
+            "description": "Criação de sites profissionais e sistemas sob medida para empresas",
+            "provider": {
+                "@type": "Person",
+                "name": "JockaMt"
+            }
+        }
+    }
+    </script>
+</head>
+
+<body>
+    <header role="banner">
+        <div class="header-content">
+            <img src="https://github.com/JockaMt.png" alt="JockaMt - Logo do desenvolvedor web"
+                style="max-width:50px;height:auto;border-radius: 100%;">
+            <nav role="navigation" aria-label="Menu principal">
+                <ul>
+                    <li><a href="#hero" aria-label="Ir para seção inicial">Início</a></li>
+                    <li><a href="#projects" aria-label="Ver meus projetos">Projetos</a></li>
+                    <li><a href="#about" aria-label="Saber mais sobre mim">Sobre</a></li>
+                    <li><a href="https://wa.me/5582991245437" target="_blank" rel="noopener noreferrer"
+                            aria-label="Entrar em contato via WhatsApp">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section id="hero" role="banner">
+            <div class="hero-content">
+                <div class="hero-content-left">
+                    <h1>JockaMt</h1>
+                    <p class="hero-subtitle">Desenvolvedor Web & Freelancer</p>
+                    <p>Desenvolvo sites profissionais e sistemas sob medida para empresas que querem crescer. Mais
+                        clientes,
+                        processos automatizados e resultados reais com qualidade, prazo e suporte.</p>
+                    <div class="hero-buttons">
+                        <a href="#projects" class="btn" aria-label="Ver meus projetos">Explorar Projetos</a>
+                        <a href="https://github.com/JockaMt" target="_blank" class="btn btn-secondary"
+                            rel="noopener noreferrer" aria-label="Visitar meu perfil no GitHub">Meu GitHub</a>
+                    </div>
+                </div>
+                <div class="hero-content-right">
+                    <img class="hero-image" src="public/hero-image.jpg" alt="JockaMt - Desenvolvedor Web profissional"
+                        loading="eager">
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" aria-labelledby="projects-heading">
+            <h2 id="projects-heading">Meus Projetos</h2>
+            <div>
+                <div id="category-filters" role="tablist" aria-label="Filtros de categoria de projetos">
+                </div>
+                <div id="projects-section" class="projects-grid" role="tabpanel" aria-label="Lista de projetos">
+                </div>
+                <div id="pagination-container" role="navigation" aria-label="Paginação de projetos"></div>
+            </div>
+        </section>
+
+        <section id="about" aria-labelledby="about-heading">
+            <h2 id="about-heading">Sobre mim</h2>
+            <p>Olá! Meu nome é JockaMt, um desenvolvedor dedicado e focado em entregar soluções de alta qualidade. Tenho
+                experiência em desenvolvimento frontend e backend, utilizando tecnologias como HTML, CSS, JavaScript,
+                TypeScript, Python e Django. Além disso, gosto de aprender novas ferramentas e metodologias para
+                melhorar
+                continuamente meu trabalho. Meu objetivo é contribuir para projetos inovadores e ajudar empresas a
+                alcançarem seus objetivos tecnológicos. Se você está procurando alguém comprometido, criativo e com
+                habilidades técnicas sólidas, estou pronto para fazer parte da sua equipe!</p>
+        </section>
+
+        <section id="skills" aria-labelledby="skills-heading">
+            <h2 id="skills-heading">Minhas Habilidades</h2>
+            <div id="skills-section" class="skills-grid" role="list" aria-label="Lista de habilidades técnicas"></div>
+        </section>
+    </main>
+    <footer id="contact" role="contentinfo" aria-labelledby="contact-heading">
+        <div class="footer-inner">
+            <div class="footer-content">
+                <div class="footer-contact">
+                    <h3 id="contact-heading">Entre em Contato</h3>
+                    <nav aria-label="Links de contato">
+                        <a href="mailto:jocksonmatheus@gmail.com" class="contact-item"
+                            aria-label="Enviar email para jocksonmatheus@gmail.com">
+                            <img src="public/icons/gmail.svg" alt="" class="footer-icon" role="presentation" />
+                            <span class="sr-only">Email</span>
+                        </a>
+                        <a href="https://wa.me/5582991245437" target="_blank" rel="noopener noreferrer"
+                            class="contact-item" aria-label="Entrar em contato pelo WhatsApp">
+                            <img src="public/icons/whatsapp.svg" alt="" class="footer-icon" role="presentation" />
+                            <span class="sr-only">WhatsApp</span>
+                        </a>
+                        <a href="https://github.com/JockaMt" target="_blank" rel="noopener noreferrer"
+                            class="contact-item" aria-label="Ver perfil no GitHub">
+                            <img src="public/icons/github.svg" alt="" class="footer-icon" role="presentation" />
+                            <span class="sr-only">GitHub</span>
+                        </a>
+                        <a href="https://www.linkedin.com/in/jocka-dev" target="_blank" rel="noopener noreferrer"
+                            class="contact-item" aria-label="Ver perfil no LinkedIn">
+                            <img src="public/icons/linkedin.svg" alt="" class="footer-icon" role="presentation" />
+                            <span class="sr-only">LinkedIn</span>
+                        </a>
+                    </nav>
+                </div>
+                <div class="download-cv">
+                    <a href="public/cv-jockamt.pdf" download="CV-JockaMt-Desenvolvedor-Web.pdf" class="cv-download-btn"
+                        aria-label="Baixar currículo em PDF">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                            <path
+                                d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z" />
+                        </svg>
+                        Baixar Currículo
+                    </a>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2025 JockaMt. Todos os direitos reservados.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+<script src="scripts.js"></script>
+
+</html>
