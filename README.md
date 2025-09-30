@@ -22,7 +22,7 @@ Meu objetivo é dominar **todo o ciclo de desenvolvimento** – do backend ao fr
 ---
 
 ## 🌐 Meus Sites
-- **<span style="color:red">Site Pessoal:</span>** [jockamt.github.io/landing-page](https://jockamt.github.io/landing-page/) 
+- **<span style="color:red">Site Pessoal:</span>** [jockamt.github.io/JockaMt](https://jockamt.github.io/JockaMt/) 
 - **<span style="color:red">Brilliant Software:</span>** [brilliantsoftware.com.br](https://brilliantsoftware.com.br)  
 
 ---
