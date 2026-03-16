@@ -2,15 +2,29 @@ const projectsSection = document.getElementById('projects-section');
 const categoryFilters = document.getElementById('category-filters');
 const paginationContainer = document.getElementById('pagination-container');
 const skillsSection = document.getElementById('skills-section');
+const heroTechnologies = document.getElementById('hero-technologies');
+const projectsHeading = document.getElementById('projects');
 
 let allProjects = [];
 let allCategories = [];
 let allSkills = {};
 let currentPage = 1;
 let projectsPerPage = window.innerWidth < 768 ? 3 : 6;
+let currentFilteredProjects = [];
+let currentFilterType = 'all'; // 'all', 'category', 'technology'
+let currentFilterValue = 'all';
 
 function getProjectsPerPage() {
     return window.innerWidth < 768 ? 3 : 6;
+}
+
+function shuffleArray(items = []) {
+    const shuffled = [...items];
+    for (let i = shuffled.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+    }
+    return shuffled;
 }
 
 function formatProjectDescription(description = '') {
@@ -42,6 +56,79 @@ function getProjectLinkIndicator(project) {
     `;
 }
 
+function getTechnologiesMarquee(technologies = []) {
+    if (!technologies.length) {
+        return '';
+    }
+
+    const badges = technologies
+        .map(tech => `<span class="tech-badge tech-badge-clickable" data-technology="${tech}" data-origin="hero" role="button" tabindex="0" aria-label="Filtrar projetos com ${tech}">${tech}</span>`)
+        .join('');
+
+    return `
+        <div class="technologies-marquee" aria-label="Tecnologias utilizadas: ${technologies.join(', ')}">
+            <div class="technologies-marquee-content">
+                <div class="technologies-group">${badges}</div>
+                <div class="technologies-group" aria-hidden="true">${badges}</div>
+            </div>
+        </div>
+    `;
+}
+
+function getTechnologiesBadges(technologies = []) {
+    if (!technologies.length) {
+        return '';
+    }
+
+    const shuffledTechnologies = shuffleArray(technologies);
+    const maxVisibleBadges = 3;
+    const visibleTechnologies = shuffledTechnologies.slice(0, maxVisibleBadges);
+    const hiddenTechnologies = shuffledTechnologies.slice(maxVisibleBadges);
+
+    const badges = visibleTechnologies
+        .map(tech => `<span class="tech-badge tech-badge-clickable" data-technology="${tech}" data-origin="card" role="button" tabindex="0" aria-label="Filtrar projetos com ${tech}">${tech}</span>`)
+        .join('');
+
+    const hiddenBadges = hiddenTechnologies
+        .map(tech => `<span class="tech-badge tech-badge-clickable tech-badge-overflow-item" data-technology="${tech}" data-origin="card" role="button" tabindex="0" aria-label="Filtrar projetos com ${tech}">${tech}</span>`)
+        .join('');
+
+    const overflowBadge = hiddenTechnologies.length
+        ? `
+            <div class="tech-badge-overflow" aria-label="Tecnologias ocultas">
+                <span class="tech-badge tech-badge-overflow-trigger" tabindex="0" aria-label="Mostrar ${hiddenTechnologies.length} tecnologias ocultas">+${hiddenTechnologies.length}</span>
+                <div class="tech-badge-overflow-stack" role="list" aria-label="Tecnologias ocultas">
+                    ${hiddenBadges}
+                </div>
+            </div>
+        `
+        : '';
+
+    return `
+        <div class="technologies" aria-label="Tecnologias utilizadas: ${shuffledTechnologies.join(', ')}">
+            ${badges}
+            ${overflowBadge}
+        </div>
+    `;
+}
+
+function renderHeroTechnologies(projects = []) {
+    if (!heroTechnologies) {
+        return;
+    }
+
+    const uniqueTechnologies = [];
+    projects.forEach(project => {
+        (project.technologies || []).forEach(tech => {
+            if (!uniqueTechnologies.includes(tech)) {
+                uniqueTechnologies.push(tech);
+            }
+        });
+    });
+
+    heroTechnologies.innerHTML = getTechnologiesMarquee(uniqueTechnologies);
+}
+
 function displayProjects(page) {
     projectsSection.innerHTML = '';
     projectsPerPage = getProjectsPerPage();
@@ -53,8 +140,8 @@ function displayProjects(page) {
         const projectCard = document.createElement('div');
         projectCard.className = 'project-card';
         projectCard.dataset.category = (project.categories || []).join(',');
-        const technologiesList = (project.technologies || []).map(tech => `<span class="tech-badge">${tech}</span>`).join(' ');
-        
+        const technologiesBadges = getTechnologiesBadges(project.technologies || []);
+
         projectCard.innerHTML = `
             ${getProjectLinkIndicator(project)}
             <div class="card-content">
@@ -62,7 +149,7 @@ function displayProjects(page) {
                 <p>${formatProjectDescription(project.description)}</p>
             </div>
             <div class="card-footer">
-                <div class="technologies">${technologiesList}</div>
+                ${technologiesBadges}
                 ${project.gh ? `<a href="${project.gh}" class="github-link" target="_blank" rel="noopener noreferrer">GitHub</a>` : ''}
             </div>
         `;
@@ -70,7 +157,10 @@ function displayProjects(page) {
         if (project.url) {
             projectCard.classList.add('clickable');
             projectCard.addEventListener('click', (e) => {
-                if (e.target.tagName.toLowerCase() !== 'a') {
+                const clickedLink = e.target.closest('a');
+                const clickedTechBadge = e.target.closest('.tech-badge-clickable');
+                const clickedOverflowBadge = e.target.closest('.tech-badge-overflow');
+                if (!clickedLink && !clickedTechBadge && !clickedOverflowBadge) {
                     window.open(project.url, '_blank');
                 }
             });
@@ -144,6 +234,7 @@ fetch('projects.json')
         allProjects = data.projects || [];
         allCategories = data.cartegories || [];
         allSkills = data.skills || {};
+        currentFilteredProjects = allProjects;
 
         // Render projetos + paginação
         displayProjects(currentPage);
@@ -178,26 +269,84 @@ fetch('projects.json')
 
         // Render skills dinâmicas
         renderSkills(allSkills);
+
+        // Render tecnologias em destaque no header
+        renderHeroTechnologies(allProjects);
         
         // Adicionar dados estruturados para projetos
         addProjectsStructuredData(allProjects);
     })
     .catch(error => console.error('Error loading data:', error));
 
+// Delegação de eventos para cliques em badges de tecnologia
+document.addEventListener('click', (e) => {
+    const techBadge = e.target.closest('.tech-badge-clickable');
+    if (techBadge) {
+        const technology = techBadge.getAttribute('data-technology');
+        const badgeOrigin = techBadge.getAttribute('data-origin');
+        if (technology) {
+            filterProjectsByTechnology(technology, badgeOrigin === 'hero');
+        }
+    }
+});
+
+// Suportar tecla Enter em badges de tecnologia
+document.addEventListener('keydown', (e) => {
+    const techBadge = e.target.closest('.tech-badge-clickable');
+    if (e.key === 'Enter' && techBadge) {
+        const technology = techBadge.getAttribute('data-technology');
+        const badgeOrigin = techBadge.getAttribute('data-origin');
+        if (technology) {
+            filterProjectsByTechnology(technology, badgeOrigin === 'hero');
+        }
+    }
+});
+
 function filterProjects(category) {
     let filteredProjects = [];
     projectsPerPage = getProjectsPerPage();
     if (category === 'all') {
         filteredProjects = allProjects;
+        currentFilterType = 'all';
     } else {
         filteredProjects = allProjects.filter(project => {
             const cardCategories = (project.categories || []).map(cat => cat.trim().toLowerCase());
             return cardCategories.includes(category.toLowerCase());
         });
+        currentFilterType = 'category';
     }
+    currentFilterValue = category;
+    currentFilteredProjects = filteredProjects;
     currentPage = 1;
     displayFilteredProjects(filteredProjects, currentPage);
     setupPaginationForFiltered(filteredProjects);
+}
+
+function filterProjectsByTechnology(technology, shouldScroll = false) {
+    let filteredProjects = [];
+    projectsPerPage = getProjectsPerPage();
+    
+    filteredProjects = allProjects.filter(project => {
+        const projectTechs = (project.technologies || []).map(tech => tech.trim().toLowerCase());
+        return projectTechs.includes(technology.toLowerCase());
+    });
+    
+    currentFilterType = 'technology';
+    currentFilterValue = technology;
+    currentFilteredProjects = filteredProjects;
+    currentPage = 1;
+    
+    // Remover o filtro de categoria ativo
+    if (categoryFilters) {
+        categoryFilters.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    }
+    
+    displayFilteredProjects(filteredProjects, currentPage);
+    setupPaginationForFiltered(filteredProjects);
+
+    if (shouldScroll && projectsHeading) {
+        projectsHeading.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
 }
 
 function displayFilteredProjects(projects, page) {
@@ -211,16 +360,16 @@ function displayFilteredProjects(projects, page) {
         const projectCard = document.createElement('div');
         projectCard.className = 'project-card';
         projectCard.dataset.category = (project.categories || []).join(',');
-        const technologiesList = (project.technologies || []).map(tech => `<span class="tech-badge">${tech}</span>`).join(' ');
-        
+        const technologiesBadges = getTechnologiesBadges(project.technologies || []);
+
         projectCard.innerHTML = `
             ${getProjectLinkIndicator(project)}
             <div class="card-content">
-                <h3>${project.name}</h3>
+                <h3 class="card-title">${project.name}</h3>
                 <p>${formatProjectDescription(project.description)}</p>
             </div>
             <div class="card-footer">
-                <div class="technologies">${technologiesList}</div>
+                ${technologiesBadges}
                 ${project.gh ? `<a href="${project.gh}" class="github-link" target="_blank" rel="noopener noreferrer">GitHub</a>` : ''}
             </div>
         `;
@@ -228,7 +377,10 @@ function displayFilteredProjects(projects, page) {
         if (project.url) {
             projectCard.classList.add('clickable');
             projectCard.addEventListener('click', (e) => {
-                if (e.target.tagName.toLowerCase() !== 'a') {
+                const clickedLink = e.target.closest('a');
+                const clickedTechBadge = e.target.closest('.tech-badge-clickable');
+                const clickedOverflowBadge = e.target.closest('.tech-badge-overflow');
+                if (!clickedLink && !clickedTechBadge && !clickedOverflowBadge) {
                     window.open(project.url, '_blank');
                 }
             });

@@ -89,7 +89,7 @@
 <body>
     <header role="banner">
         <div class="header-content">
-            <img src="https://github.com/JockaMt.png" alt="JockaMt - Logo do desenvolvedor web"
+            <img src="https://github.com/JockaMt.png" alt="logo"
                 style="max-width:50px;height:auto;border-radius: 100%;">
             <nav role="navigation" aria-label="Menu principal">
                 <ul>
@@ -107,10 +107,9 @@
             <div class="hero-content">
                 <div class="hero-content-left">
                     <h1>JockaMt</h1>
-                    <p class="hero-subtitle">Desenvolvedor Web & Freelancer</p>
-                    <p>Desenvolvo sites profissionais e sistemas sob medida para empresas que querem crescer. Mais
-                        clientes,
-                        processos automatizados e resultados reais com qualidade, prazo e suporte.</p>
+                    <p class="hero-subtitle">Desenvolvedor Fullstack</p>
+                    <p>Atuo no desenvolvimento de aplicações web completas, desde a interface até a arquitetura de backend. Trabalho com JavaScript, TypeScript, React, Node.js e Python, priorizando código limpo, desempenho e escalabilidade.</p>
+                    <div id="hero-technologies" class="hero-technologies" aria-label="Tecnologias em destaque"></div>
                     <div class="hero-buttons">
                         <a href="#projects" class="btn" aria-label="Ver meus projetos">Explorar Projetos</a>
                         <a href="https://github.com/JockaMt" target="_blank" class="btn btn-secondary"
@@ -118,8 +117,13 @@
                     </div>
                 </div>
                 <div class="hero-content-right">
-                    <img class="hero-image" src="public/hero-image.jpg" alt="JockaMt - Desenvolvedor Web profissional"
-                        loading="eager">
+                    <div class="hero-image-frame">
+                        <img class="hero-image" src="public/hero-image.jpg" alt="JockaMt - Desenvolvedor Web profissional"
+                            loading="eager">
+                        <svg class="hero-orbit" viewBox="0 0 316 316" aria-hidden="true" focusable="false">
+                            <circle class="hero-orbit-ring" cx="158" cy="158" r="156"></circle>
+                        </svg>
+                    </div>
                 </div>
             </div>
         </section>
@@ -128,6 +132,17 @@
             <h2 id="projects-heading">Meus Projetos</h2>
             <div>
                 <div id="category-filters" role="tablist" aria-label="Filtros de categoria de projetos">
+                </div>
+                <div class="projects-info">
+                    <p><span class="info-icon">ℹ️</span> Projetos com o ícone
+                        <span class="projects-info-link-icon" aria-hidden="true" title="Abre em nova aba">
+                            <svg viewBox="0 0 24 24" focusable="false">
+                                <path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3zm5 16H5V5h7V3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7z"/>
+                            </svg>
+                        </span>
+                        são clicáveis para visualizar o projeto.
+                    </p>
+                    <p>Projetos com botão GitHub possuem repositório público. Tags são clicáveis para filtrar por tecnologia.</p>
                 </div>
                 <div id="projects-section" class="projects-grid" role="tabpanel" aria-label="Lista de projetos">
                 </div>
