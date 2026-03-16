@@ -11,8 +11,8 @@
             "technologies": [
                 "HTML",
                 "CSS",
-                "JavaScript",
-                "TypeScript"
+                "TypeScript",
+                "Rust"
             ]
         },
         {
@@ -102,6 +102,22 @@
                 "HTML",
                 "CSS",
                 "JavaScript"
+            ]
+        },
+        {
+            "name": "Alagoas Mais Limpa",
+            "description": "(Em manutenção) Projeto de conscientização ambiental para o estado de Alagoas.",
+            "url": "https://alagoas-mais-limpa-site-25ed5c.gitlab.io/",
+            "gh": "",
+            "categories": [
+                "fullstack"
+            ],
+            "technologies": [
+                "HTML",
+                "CSS",
+                "JavaScript",
+                "Python",
+                "Django"
             ]
         }
     ],

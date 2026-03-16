@@ -13,6 +13,35 @@ function getProjectsPerPage() {
     return window.innerWidth < 768 ? 3 : 6;
 }
 
+function formatProjectDescription(description = '') {
+    const maintenancePrefix = '(Em manutenção)';
+    const trimmedDescription = description.trim();
+
+    if (!trimmedDescription.startsWith(maintenancePrefix)) {
+        return trimmedDescription;
+    }
+
+    const descriptionWithoutPrefix = trimmedDescription
+        .slice(maintenancePrefix.length)
+        .trim();
+
+    return `<span class="maintenance-tag">Em manutenção</span><br>${descriptionWithoutPrefix}`;
+}
+
+function getProjectLinkIndicator(project) {
+    if (!project.url) {
+        return '';
+    }
+
+    return `
+        <span class="card-link-indicator" aria-hidden="true" title="Abre em nova aba">
+            <svg viewBox="0 0 24 24" focusable="false">
+                <path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3zm5 16H5V5h7V3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7z"/>
+            </svg>
+        </span>
+    `;
+}
+
 function displayProjects(page) {
     projectsSection.innerHTML = '';
     projectsPerPage = getProjectsPerPage();
@@ -27,9 +56,10 @@ function displayProjects(page) {
         const technologiesList = (project.technologies || []).map(tech => `<span class="tech-badge">${tech}</span>`).join(' ');
         
         projectCard.innerHTML = `
+            ${getProjectLinkIndicator(project)}
             <div class="card-content">
                 <h3>${project.name}</h3>
-                <p>${project.description}</p>
+                <p>${formatProjectDescription(project.description)}</p>
             </div>
             <div class="card-footer">
                 <div class="technologies">${technologiesList}</div>
@@ -184,9 +214,10 @@ function displayFilteredProjects(projects, page) {
         const technologiesList = (project.technologies || []).map(tech => `<span class="tech-badge">${tech}</span>`).join(' ');
         
         projectCard.innerHTML = `
+            ${getProjectLinkIndicator(project)}
             <div class="card-content">
                 <h3>${project.name}</h3>
-                <p>${project.description}</p>
+                <p>${formatProjectDescription(project.description)}</p>
             </div>
             <div class="card-footer">
                 <div class="technologies">${technologiesList}</div>

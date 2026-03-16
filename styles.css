@@ -235,7 +235,20 @@ header nav ul li a:hover {
 }
 
 .card-content p {
-    display: flex;
+    display: block;
+}
+
+.maintenance-tag {
+    display: inline-block;
+    margin-bottom: 0.35rem;
+    padding: 0.2rem 0.55rem;
+    border-radius: 999px;
+    background: #fff4d6;
+    color: #8a5a00;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
 }
 
 .project-card {
@@ -243,11 +256,38 @@ header nav ul li a:hover {
     border: 1px solid #eaeaea;
     border-radius: 8px;
     padding: 1.5rem;
+    position: relative;
     transition: border-color 0.3s ease, box-shadow 0.3s ease;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+}
+
+.card-link-indicator {
+    position: absolute;
+    top: 0.65rem;
+    right: 0.65rem;
+    width: 1.9rem;
+    height: 1.9rem;
+    border-radius: 999px;
+    border: 1px solid #dce9f5;
+    background: #f4f9ff;
+    color: #007acc;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-link-indicator svg {
+    width: 1rem;
+    height: 1rem;
+    fill: currentColor;
+}
+
+.project-card.clickable:hover .card-link-indicator {
+    background: #e7f3ff;
+    border-color: #bfdcff;
 }
 
 .project-card.clickable:hover {
