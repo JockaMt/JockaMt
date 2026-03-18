@@ -421,6 +421,115 @@ window.addEventListener('resize', () => {
     }
 });
 
+function setupHeroMeshHoverEffect() {
+    const heroSection = document.getElementById('hero');
+    if (!heroSection) {
+        return;
+    }
+
+    const coarsePointer = window.matchMedia('(pointer: coarse)').matches;
+    if (coarsePointer) {
+        return;
+    }
+
+    let frameId = null;
+    let pointerX = '50%';
+    let pointerY = '50%';
+
+    const applyPointerPosition = () => {
+        heroSection.style.setProperty('--mesh-x', pointerX);
+        heroSection.style.setProperty('--mesh-y', pointerY);
+        frameId = null;
+    };
+
+    heroSection.addEventListener('pointerenter', () => {
+        heroSection.classList.add('hero-mesh-active');
+    });
+
+    heroSection.addEventListener('pointerleave', () => {
+        heroSection.classList.remove('hero-mesh-active');
+    });
+
+    heroSection.addEventListener('pointermove', (event) => {
+        const heroRect = heroSection.getBoundingClientRect();
+        const x = ((event.clientX - heroRect.left) / heroRect.width) * 100;
+        const y = ((event.clientY - heroRect.top) / heroRect.height) * 100;
+
+        const clampedX = Math.min(100, Math.max(0, x));
+        const clampedY = Math.min(100, Math.max(0, y));
+
+        pointerX = `${clampedX.toFixed(2)}%`;
+        pointerY = `${clampedY.toFixed(2)}%`;
+
+        if (frameId === null) {
+            frameId = requestAnimationFrame(applyPointerPosition);
+        }
+    });
+}
+
+function setupMobileHeaderAutoHide() {
+    const headerElement = document.querySelector('header');
+    if (!headerElement) {
+        return;
+    }
+
+    const mobileQuery = window.matchMedia('(max-width: 768px)');
+    let lastScrollY = window.scrollY;
+    let ticking = false;
+    const minDelta = 8;
+
+    const updateHeaderState = () => {
+        const currentScrollY = window.scrollY;
+        const isAtTop = currentScrollY <= 12;
+
+        if (!mobileQuery.matches) {
+            headerElement.classList.remove('header-hidden-mobile');
+            headerElement.classList.remove('header-at-top-mobile');
+            lastScrollY = currentScrollY;
+            ticking = false;
+            return;
+        }
+
+        headerElement.classList.toggle('header-at-top-mobile', isAtTop);
+
+        if (isAtTop) {
+            headerElement.classList.remove('header-hidden-mobile');
+            lastScrollY = currentScrollY;
+            ticking = false;
+            return;
+        }
+
+        const delta = currentScrollY - lastScrollY;
+        if (Math.abs(delta) >= minDelta) {
+            if (delta > 0) {
+                headerElement.classList.add('header-hidden-mobile');
+            } else {
+                headerElement.classList.remove('header-hidden-mobile');
+            }
+            lastScrollY = currentScrollY;
+        }
+
+        ticking = false;
+    };
+
+    const onScroll = () => {
+        if (!ticking) {
+            requestAnimationFrame(updateHeaderState);
+            ticking = true;
+        }
+    };
+
+    window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('resize', () => {
+        if (!mobileQuery.matches) {
+            headerElement.classList.remove('header-hidden-mobile');
+            headerElement.classList.remove('header-at-top-mobile');
+        }
+    });
+
+    updateHeaderState();
+}
+
 // Inicializar as estrelas quando a página carregar
 document.addEventListener('DOMContentLoaded', () => {
     const starsContainers = document.querySelectorAll('.stars');
@@ -444,6 +553,9 @@ document.addEventListener('DOMContentLoaded', () => {
     }, { threshold: 0.12 });
 
     sections.forEach(sec => io.observe(sec));
+
+    setupHeroMeshHoverEffect();
+    setupMobileHeaderAutoHide();
 });
 
 // Adicionar dados estruturados para projetos
