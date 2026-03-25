@@ -63,7 +63,7 @@ async function main() {
       const technologies = unique([...baseLanguage, ...repoLanguages]);
 
       return {
-        name: repo.name,
+        name: repo.name.replace(/-/g, ' ').replace(/_/g, ' ').toLowerCase().replace(/\b\w/g, (char) => char.toUpperCase()),
         description: repo.description || 'Sem descricao disponivel.',
         url: repo.homepage || '',
         gh: repo.html_url,
