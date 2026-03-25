@@ -1,7 +1,7 @@
 {
     "projects": [
         {
-            "name": "JockaMt",
+            "name": "Jockamt",
             "description": "Meu repositório pessoal!",
             "url": "https://jockamt.github.io/JockaMt/",
             "gh": "https://github.com/JockaMt/JockaMt",
@@ -15,7 +15,7 @@
             ]
         },
         {
-            "name": "Visione_del_paradiso",
+            "name": "Visione Del Paradiso",
             "description": "Sistema: Gerenciador de hoteis com flask",
             "url": "https://visione-del-paradiso.onrender.com",
             "gh": "https://github.com/JockaMt/Visione_del_paradiso",
@@ -31,7 +31,7 @@
             ]
         },
         {
-            "name": "django-crud",
+            "name": "Django Crud",
             "description": "Sistema web desenvolvido com Django para o gerenciamento de clientes e serviços em uma oficina de motos.",
             "url": "",
             "gh": "https://github.com/JockaMt/django-crud",
@@ -45,7 +45,7 @@
             ]
         },
         {
-            "name": "controle-financeiro",
+            "name": "Controle Financeiro",
             "description": "Aplicação web desenvolvida com React.js para controle de finanças pessoais. Permite registrar entradas e saídas financeiras, exibindo um resumo atualizado em tempo real.",
             "url": "",
             "gh": "https://github.com/JockaMt/controle-financeiro",
@@ -58,7 +58,7 @@
             ]
         },
         {
-            "name": "calculadora-de-peso-de-ouro",
+            "name": "Calculadora De Peso De Ouro",
             "description": "Aplicação desktop moderna para calcular pesos de metais preciosos com interface PySide6.",
             "url": "",
             "gh": "https://github.com/JockaMt/calculadora-de-peso-de-ouro",
@@ -70,7 +70,7 @@
             ]
         },
         {
-            "name": "rickandmorty-viewer",
+            "name": "Rickandmorty Viewer",
             "description": "Aplicação web para visualizar personagens e informações do universo de Rick and Morty, consumindo a The Rick and Morty API.",
             "url": "",
             "gh": "https://github.com/JockaMt/rickandmorty-viewer",
@@ -85,7 +85,7 @@
             ]
         },
         {
-            "name": "vorp-friends",
+            "name": "Vorp Friends",
             "description": "Uma rede social moderna",
             "url": "",
             "gh": "https://github.com/JockaMt/vorp-friends",
@@ -98,7 +98,7 @@
             ]
         },
         {
-            "name": "realmakerstudio-site",
+            "name": "Realmakerstudio Site",
             "description": "\"Landing page e vitrine oficial da Realmakerstudio, um estúdio indie focado em jogos de pixelart.\"",
             "url": "https://realmakersitepublic-rouge.vercel.app/",
             "gh": "https://github.com/JockaMt/realmakerstudio-site",
@@ -113,7 +113,7 @@
             ]
         },
         {
-            "name": "chat-grpc",
+            "name": "Chat Grpc",
             "description": "Sistema de chat simples usando gRPC, uma estrutura de chamada de procedimento remoto (RPC) moderna e eficiente.",
             "url": "",
             "gh": "https://github.com/JockaMt/chat-grpc",
@@ -125,7 +125,7 @@
             ]
         },
         {
-            "name": "rotinas-app",
+            "name": "Rotinas App",
             "description": "A Schedule made in React Native for personal use.",
             "url": "",
             "gh": "https://github.com/JockaMt/rotinas-app",
@@ -137,7 +137,7 @@
             ]
         },
         {
-            "name": "buscador-de-empresas-em-deficit",
+            "name": "Buscador De Empresas Em Deficit",
             "description": "buscador de empresas",
             "url": "",
             "gh": "https://github.com/JockaMt/buscador-de-empresas-em-deficit",
@@ -149,7 +149,7 @@
             ]
         },
         {
-            "name": "bot-para-discord",
+            "name": "Bot Para Discord",
             "description": "Primeiro bot de discord feito por mim :3",
             "url": "",
             "gh": "https://github.com/JockaMt/bot-para-discord",
@@ -161,7 +161,7 @@
             ]
         },
         {
-            "name": "lista-de-tarefas",
+            "name": "Lista De Tarefas",
             "description": "A to do list made with javascript.",
             "url": "https://jockaplay-todolist.netlify.app/",
             "gh": "https://github.com/JockaMt/lista-de-tarefas",
