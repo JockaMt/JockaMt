@@ -204,7 +204,7 @@ function renderSkills(skillsByCategory = {}) {
 // Carrega todos os dados uma única vez
 getProjects()
     .then(data => {
-        allProjects = data.projects || [];
+        allProjects = shuffleArray(data.projects || []);
         allCategories = data.cartegories || data.categories || [];
         allSkills = data.skills || {};
         currentFilteredProjects = allProjects;
