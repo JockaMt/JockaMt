@@ -699,6 +699,11 @@ header nav ul li a:hover {
     border-radius: 12px;
     padding: 1rem 1.2rem;
     box-shadow: 0 6px 16px rgba(0, 0, 0, 0.04);
+    transition: all 0.3s ease;
+}
+
+.timeline-item:hover {
+    border-color: #007acc;
 }
 
 .timeline-item::before {
@@ -710,7 +715,7 @@ header nav ul li a:hover {
     height: 0.75rem;
     border-radius: 999px;
     background: #007acc;
-    border: 2px solid #fff;
+    border: 4px solid #fff;
     box-shadow: 0 0 0 3px #d6e8f7;
 }
 
@@ -883,87 +888,118 @@ header nav ul li a:hover {
 
 /* Rodapé */
 footer {
-    text-align: center;
-    padding: 2rem;
-    /* Reduzido */
-    background: #fff;
-    color: #555;
-    border-top: 1px solid #eaeaea;
+    padding: 2.4rem 1.5rem 1.2rem;
+    background:
+        radial-gradient(circle at 8% 0%, rgba(0, 122, 204, 0.14), transparent 42%),
+        radial-gradient(circle at 90% 100%, rgba(0, 95, 158, 0.16), transparent 42%),
+        linear-gradient(180deg, #ffffff 0%, #f2f8ff 100%);
+    color: #2a3a4a;
+    border-top: 1px solid #d6e8f7;
 }
 
-/* Footer - layout e ícones */
-.footer-inner {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-    gap: 1rem;
-    flex-wrap: wrap;
-}
-
-.footer-content {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
+.footer-shell {
     width: 100%;
     max-width: 1200px;
-    gap: 1.5rem;
+    margin: 0 auto;
 }
 
-.footer-contact {
-    display: flex;
-    flex-shrink: 1;
-    flex-direction: column;
-}
-
-.footer-contact nav {
-    display: flex;
+.footer-top {
+    display: grid;
+    grid-template-columns: minmax(240px, 1.2fr) minmax(180px, 0.8fr) minmax(220px, 1fr) auto;
+    gap: 1.4rem;
     align-items: start;
-    gap: 1rem;
+}
+
+.footer-brand h3 {
+    margin-bottom: 0.6rem;
+    font-size: 1.45rem;
+    line-height: 1.25;
+    color: #11324f;
+}
+
+.footer-brand p {
+    max-width: 45ch;
+    color: #476178;
+}
+
+.footer-quick-links h4,
+.footer-contact h4 {
+    margin-bottom: 0.65rem;
+    color: #11324f;
+}
+
+.footer-quick-links nav {
+    display: flex;
+    flex-direction: column;
+    gap: 0.45rem;
+}
+
+.footer-quick-links a {
+    color: #3f5d78;
+    text-decoration: none;
+    width: fit-content;
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.footer-quick-links a:hover {
+    color: #007acc;
+    transform: translateX(3px);
+}
+
+.footer-email {
+    color: #2f5f86;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.footer-email:hover {
+    color: #007acc;
+}
+
+.footer-social {
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+    margin-top: 0.8rem;
     flex-wrap: wrap;
 }
 
 .contact-item {
     display: inline-flex;
     align-items: center;
-    gap: 0.6rem;
-    color: #777;
-}
-
-.contact-item a {
-    color: #555;
-    text-decoration: none;
-    transition: color .2s ease;
-}
-
-.contact-item a:hover {
-    color: #007acc;
+    justify-content: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 5px;
+    border: 1px solid #c8dff3;
+    background: rgba(255, 255, 255, 0.8);
+    transition: border-color 0.2s ease, background-color 0.2s ease, transform 0.2s ease;
 }
 
 .footer-icon {
-    width: 25px;
-    height: 25px;
+    width: 1.25rem;
+    height: 1.25rem;
     display: inline-block;
     object-fit: contain;
-    filter: grayscale(100%) brightness(0.5);
-    opacity: 0.85;
-    transition: filter .2s ease, opacity .2s ease, transform .2s ease;
+    filter: grayscale(100%) brightness(0.55);
+    opacity: 0.9;
+    transition: filter 0.2s ease, opacity 0.2s ease;
+}
+
+.contact-item:hover {
+    border-color: #89c5f4;
+    background: #eaf5ff;
+    transform: translateY(-2px);
 }
 
 .contact-item:hover .footer-icon {
     filter: grayscale(0%) brightness(1);
     opacity: 1;
-    transform: scale(1.1);
 }
 
-.footer-copy { margin: 0; font-size: .95rem; color: #777; }
-
-/* Botão de Download CV */
 .download-cv {
-    text-align: center;
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
 }
 
 .cv-download-btn {
@@ -973,17 +1009,18 @@ footer {
     background: #007acc;
     border: 2px solid #007acc;
     color: #fff;
-    padding: 0.6rem 2rem;
+    padding: 0.65rem 1.2rem;
     border-radius: 5px;
     text-decoration: none;
     font-weight: 600;
-    text-align: center;
-    transition: background-color 0.3s ease, transform 0.2s ease;
+    transition: background-color 0.25s ease, transform 0.2s ease, box-shadow 0.25s ease;
     text-wrap: nowrap;
 }
 
 .cv-download-btn:hover {
     background: #005f9e;
+    box-shadow: 0 8px 20px rgba(0, 95, 158, 0.24);
+    transform: translateY(-2px);
 }
 
 .cv-download-btn svg {
@@ -991,28 +1028,78 @@ footer {
     height: 18px;
 }
 
+.footer-bottom {
+    margin-top: 1.6rem;
+    padding-top: 1rem;
+    border-top: 1px dashed #c8dff3;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.footer-bottom p {
+    color: #51697f;
+    margin: 0;
+    font-size: 0.95rem;
+}
+
+.footer-back-top {
+    color: #2f5f86;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.2s ease;
+}
+
+.footer-back-top:hover {
+    color: #007acc;
+}
+
+@media (max-width: 1024px) {
+    .footer-top {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .download-cv {
+        justify-content: flex-start;
+    }
+}
+
 @media (max-width: 768px) {
-    .footer-inner { flex-direction: column; text-align: center; }
-    .footer-content {
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
+    footer {
+        padding: 2rem 1.2rem 1rem;
+    }
+
+    .footer-top {
+        grid-template-columns: 1fr;
         text-align: center;
     }
-    .footer-contact nav {
+
+    .footer-brand p {
+        margin: 0 auto;
+    }
+
+    .footer-quick-links nav {
+        align-items: center;
+    }
+
+    .footer-social {
         justify-content: center;
     }
-    .footer-contact { justify-content: center; }
-    
-    .cv-download-btn {
-        padding: 0.6rem 2rem;
-        width: 100%;
-        max-width: 280px;
+
+    .download-cv {
+        justify-content: center;
     }
-    
-    .cv-download-btn svg {
-        width: 16px;
-        height: 16px;
+
+    .cv-download-btn {
+        width: 100%;
+        max-width: 300px;
+        justify-content: center;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
     }
 
     .about-timeline {
@@ -1029,31 +1116,6 @@ footer {
         width: 0.65rem;
         height: 0.65rem;
     }
-}
-
-.footer-contact {
-    display: flex;
-    max-width: 1200px;
-    gap: 1rem;
-}
-
-.footer-contact .contact-item {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    color: #555;
-    text-decoration: none;
-    font-weight: 500;
-}
-
-.footer-contact .contact-item a {
-    color: #007acc;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-.footer-contact .contact-item:hover a {
-    color: #005f9e;
 }
 
 /* Animação de entrada (fade-in) para seções */
