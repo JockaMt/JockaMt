@@ -2,7 +2,7 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://jockadev.vercel.app/sitemap.xml
+Sitemap: https://jockamt.github.io/JockaMt/sitemap.xml
 
 # Crawl-delay (optional)
 Crawl-delay: 1
