@@ -1,12 +1,130 @@
 {
     "projects": [
         {
+            "name": "Lista De Tarefas",
+            "description": "(Em manutenção) Lista de tarefas simples",
+            "url": "https://jockaplay-todolist.netlify.app/",
+            "gh": "https://github.com/JockaMt/lista-de-tarefas",
+            "categories": [
+                "frontend"
+            ],
+            "technologies": [
+                "CSS",
+                "JavaScript",
+                "HTML"
+            ]
+        },
+        {
+            "name": "Rotinas App",
+            "description": "(Em manutenção) A Schedule made in React Native for personal use.",
+            "url": "",
+            "gh": "https://github.com/JockaMt/rotinas-app",
+            "categories": [
+                "frontend"
+            ],
+            "technologies": [
+                "JavaScript"
+            ]
+        },
+        {
+            "name": "Calculadora De Peso De Ouro",
+            "description": "Aplicação desktop moderna para calcular pesos de metais preciosos com interface PySide6.",
+            "url": "",
+            "gh": "https://github.com/JockaMt/calculadora-de-peso-de-ouro",
+            "categories": [
+                "frontend"
+            ],
+            "technologies": [
+                "Python"
+            ]
+        },
+        {
+            "name": "Controle Financeiro",
+            "description": "Aplicação web desenvolvida com React.js para controle de finanças pessoais. Permite registrar entradas e saídas financeiras, exibindo um resumo atualizado em tempo real.",
+            "url": "",
+            "gh": "https://github.com/JockaMt/controle-financeiro",
+            "categories": [
+                "frontend"
+            ],
+            "technologies": [
+                "JavaScript",
+                "HTML"
+            ]
+        },
+        {
+            "name": "Bot Para Discord",
+            "description": "(Em manutenção) Primeiro bot de discord feito por mim.",
+            "url": "",
+            "gh": "https://github.com/JockaMt/bot-para-discord",
+            "categories": [
+                "backend"
+            ],
+            "technologies": [
+                "JavaScript"
+            ]
+        },
+        {
+            "name": "Buscador De Empresas Em Deficit",
+            "description": "buscador de empresas",
+            "url": "",
+            "gh": "https://github.com/JockaMt/buscador-de-empresas-em-deficit",
+            "categories": [
+                "backend",
+                "fullstack"
+            ],
+            "technologies": [
+                "Python"
+            ]
+        },
+        {
+            "name": "Chat Grpc",
+            "description": "Sistema de chat simples usando gRPC, uma estrutura de chamada de procedimento remoto (RPC) moderna e eficiente.",
+            "url": "",
+            "gh": "https://github.com/JockaMt/chat-grpc",
+            "categories": [
+                "other"
+            ],
+            "technologies": [
+                "Python"
+            ]
+        },
+        {
+            "name": "Realmakerstudio Site",
+            "description": "Landing page e vitrine oficial da Realmakerstudio, um estúdio indie focado em jogos de pixelart.",
+            "url": "https://realmakersitepublic-rouge.vercel.app/",
+            "gh": "https://github.com/JockaMt/realmakerstudio-site",
+            "categories": [
+                "frontend"
+            ],
+            "technologies": [
+                "TypeScript",
+                "CSS",
+                "JavaScript",
+                "HTML"
+            ]
+        },
+        {
+            "name": "Rickandmorty Viewer",
+            "description": "Aplicação web para visualizar personagens e informações do universo de Rick and Morty, consumindo a The Rick and Morty API.",
+            "url": "",
+            "gh": "https://github.com/JockaMt/rickandmorty-viewer",
+            "categories": [
+                "frontend"
+            ],
+            "technologies": [
+                "TypeScript",
+                "CSS",
+                "JavaScript",
+                "HTML"
+            ]
+        },
+        {
             "name": "Jockamt",
             "description": "Meu repositório pessoal!",
             "url": "https://jockamt.github.io/JockaMt/",
             "gh": "https://github.com/JockaMt/JockaMt",
             "categories": [
-                "other"
+                "frontend"
             ],
             "technologies": [
                 "CSS",
@@ -45,46 +163,6 @@
             ]
         },
         {
-            "name": "Controle Financeiro",
-            "description": "Aplicação web desenvolvida com React.js para controle de finanças pessoais. Permite registrar entradas e saídas financeiras, exibindo um resumo atualizado em tempo real.",
-            "url": "",
-            "gh": "https://github.com/JockaMt/controle-financeiro",
-            "categories": [
-                "other"
-            ],
-            "technologies": [
-                "JavaScript",
-                "HTML"
-            ]
-        },
-        {
-            "name": "Calculadora De Peso De Ouro",
-            "description": "Aplicação desktop moderna para calcular pesos de metais preciosos com interface PySide6.",
-            "url": "",
-            "gh": "https://github.com/JockaMt/calculadora-de-peso-de-ouro",
-            "categories": [
-                "other"
-            ],
-            "technologies": [
-                "Python"
-            ]
-        },
-        {
-            "name": "Rickandmorty Viewer",
-            "description": "Aplicação web para visualizar personagens e informações do universo de Rick and Morty, consumindo a The Rick and Morty API.",
-            "url": "",
-            "gh": "https://github.com/JockaMt/rickandmorty-viewer",
-            "categories": [
-                "other"
-            ],
-            "technologies": [
-                "TypeScript",
-                "CSS",
-                "JavaScript",
-                "HTML"
-            ]
-        },
-        {
             "name": "Vorp Friends",
             "description": "Uma rede social moderna",
             "url": "",
@@ -96,86 +174,11 @@
                 "TypeScript",
                 "CSS"
             ]
-        },
-        {
-            "name": "Realmakerstudio Site",
-            "description": "\"Landing page e vitrine oficial da Realmakerstudio, um estúdio indie focado em jogos de pixelart.\"",
-            "url": "https://realmakersitepublic-rouge.vercel.app/",
-            "gh": "https://github.com/JockaMt/realmakerstudio-site",
-            "categories": [
-                "other"
-            ],
-            "technologies": [
-                "TypeScript",
-                "CSS",
-                "JavaScript",
-                "HTML"
-            ]
-        },
-        {
-            "name": "Chat Grpc",
-            "description": "Sistema de chat simples usando gRPC, uma estrutura de chamada de procedimento remoto (RPC) moderna e eficiente.",
-            "url": "",
-            "gh": "https://github.com/JockaMt/chat-grpc",
-            "categories": [
-                "other"
-            ],
-            "technologies": [
-                "Python"
-            ]
-        },
-        {
-            "name": "Rotinas App",
-            "description": "A Schedule made in React Native for personal use.",
-            "url": "",
-            "gh": "https://github.com/JockaMt/rotinas-app",
-            "categories": [
-                "other"
-            ],
-            "technologies": [
-                "JavaScript"
-            ]
-        },
-        {
-            "name": "Buscador De Empresas Em Deficit",
-            "description": "buscador de empresas",
-            "url": "",
-            "gh": "https://github.com/JockaMt/buscador-de-empresas-em-deficit",
-            "categories": [
-                "other"
-            ],
-            "technologies": [
-                "Python"
-            ]
-        },
-        {
-            "name": "Bot Para Discord",
-            "description": "Primeiro bot de discord feito por mim :3",
-            "url": "",
-            "gh": "https://github.com/JockaMt/bot-para-discord",
-            "categories": [
-                "other"
-            ],
-            "technologies": [
-                "JavaScript"
-            ]
-        },
-        {
-            "name": "Lista De Tarefas",
-            "description": "A to do list made with javascript.",
-            "url": "https://jockaplay-todolist.netlify.app/",
-            "gh": "https://github.com/JockaMt/lista-de-tarefas",
-            "categories": [
-                "other"
-            ],
-            "technologies": [
-                "CSS",
-                "JavaScript",
-                "HTML"
-            ]
         }
     ],
     "cartegories": [
+        "backend",
+        "frontend",
         "fullstack",
         "other"
     ],
