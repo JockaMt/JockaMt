@@ -1,3 +1,6 @@
+import { getProjects } from './get-projects.js';
+import { createProjectRenderer } from './project-renderer.js';
+
 const projectsSection = document.getElementById('projects-section');
 const categoryFilters = document.getElementById('category-filters');
 const paginationContainer = document.getElementById('pagination-container');
@@ -129,45 +132,17 @@ function renderHeroTechnologies(projects = []) {
     heroTechnologies.innerHTML = getTechnologiesMarquee(uniqueTechnologies);
 }
 
+const projectRenderer = createProjectRenderer({
+    projectsSection,
+    getProjectsPerPage,
+    formatProjectDescription,
+    getProjectLinkIndicator,
+    getTechnologiesBadges
+});
+
 function displayProjects(page) {
-    projectsSection.innerHTML = '';
     projectsPerPage = getProjectsPerPage();
-    const startIndex = (page - 1) * projectsPerPage;
-    const endIndex = startIndex + projectsPerPage;
-    const paginatedProjects = allProjects.slice(startIndex, endIndex);
-
-    paginatedProjects.forEach(project => {
-        const projectCard = document.createElement('div');
-        projectCard.className = 'project-card';
-        projectCard.dataset.category = (project.categories || []).join(',');
-        const technologiesBadges = getTechnologiesBadges(project.technologies || []);
-
-        projectCard.innerHTML = `
-            ${getProjectLinkIndicator(project)}
-            <div class="card-content">
-                <h3>${project.name}</h3>
-                <p>${formatProjectDescription(project.description)}</p>
-            </div>
-            <div class="card-footer">
-                ${technologiesBadges}
-                ${project.gh ? `<a href="${project.gh}" class="github-link" target="_blank" rel="noopener noreferrer">GitHub</a>` : ''}
-            </div>
-        `;
-
-        if (project.url) {
-            projectCard.classList.add('clickable');
-            projectCard.addEventListener('click', (e) => {
-                const clickedLink = e.target.closest('a');
-                const clickedTechBadge = e.target.closest('.tech-badge-clickable');
-                const clickedOverflowBadge = e.target.closest('.tech-badge-overflow');
-                if (!clickedLink && !clickedTechBadge && !clickedOverflowBadge) {
-                    window.open(project.url, '_blank');
-                }
-            });
-        }
-
-        projectsSection.appendChild(projectCard);
-    });
+    projectRenderer.renderProjects(allProjects, page);
 }
 
 function setupPagination(totalProjects) {
@@ -226,13 +201,11 @@ function renderSkills(skillsByCategory = {}) {
 }
 
 
-
 // Carrega todos os dados uma única vez
-fetch('projects.json')
-    .then(response => response.json())
+getProjects()
     .then(data => {
         allProjects = data.projects || [];
-        allCategories = data.cartegories || [];
+        allCategories = data.cartegories || data.categories || [];
         allSkills = data.skills || {};
         currentFilteredProjects = allProjects;
 
@@ -276,7 +249,7 @@ fetch('projects.json')
         // Adicionar dados estruturados para projetos
         addProjectsStructuredData(allProjects);
     })
-    .catch(error => console.error('Error loading data:', error));
+    .catch(error => console.error('Error loading projects:', error));
 
 // Delegação de eventos para cliques em badges de tecnologia
 document.addEventListener('click', (e) => {
@@ -350,43 +323,8 @@ function filterProjectsByTechnology(technology, shouldScroll = false) {
 }
 
 function displayFilteredProjects(projects, page) {
-    projectsSection.innerHTML = '';
     projectsPerPage = getProjectsPerPage();
-    const startIndex = (page - 1) * projectsPerPage;
-    const endIndex = startIndex + projectsPerPage;
-    const paginatedProjects = projects.slice(startIndex, endIndex);
-
-    paginatedProjects.forEach(project => {
-        const projectCard = document.createElement('div');
-        projectCard.className = 'project-card';
-        projectCard.dataset.category = (project.categories || []).join(',');
-        const technologiesBadges = getTechnologiesBadges(project.technologies || []);
-
-        projectCard.innerHTML = `
-            ${getProjectLinkIndicator(project)}
-            <div class="card-content">
-                <h3 class="card-title">${project.name}</h3>
-                <p>${formatProjectDescription(project.description)}</p>
-            </div>
-            <div class="card-footer">
-                ${technologiesBadges}
-                ${project.gh ? `<a href="${project.gh}" class="github-link" target="_blank" rel="noopener noreferrer">GitHub</a>` : ''}
-            </div>
-        `;
-
-        if (project.url) {
-            projectCard.classList.add('clickable');
-            projectCard.addEventListener('click', (e) => {
-                const clickedLink = e.target.closest('a');
-                const clickedTechBadge = e.target.closest('.tech-badge-clickable');
-                const clickedOverflowBadge = e.target.closest('.tech-badge-overflow');
-                if (!clickedLink && !clickedTechBadge && !clickedOverflowBadge) {
-                    window.open(project.url, '_blank');
-                }
-            });
-        }
-        projectsSection.appendChild(projectCard);
-    });
+    projectRenderer.renderProjects(projects, page);
 }
 
 function setupPaginationForFiltered(filteredProjects) {
