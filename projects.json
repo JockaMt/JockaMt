@@ -1,88 +1,134 @@
 {
     "projects": [
         {
-            "name": "Brilliant Software",
-            "description": "Site institucional de uma empresa de desenvolvimento de software.",
-            "url": "https://www.brilliantsoftware.com.br/",
-            "gh": "",
+            "name": "JockaMt",
+            "description": "Meu repositório pessoal!",
+            "url": "https://jockamt.github.io/JockaMt/",
+            "gh": "https://github.com/JockaMt/JockaMt",
             "categories": [
-                "frontend"
+                "other"
+            ],
+            "technologies": [
+                "CSS",
+                "JavaScript",
+                "HTML"
+            ]
+        },
+        {
+            "name": "Visione_del_paradiso",
+            "description": "Sistema: Gerenciador de hoteis com flask",
+            "url": "https://visione-del-paradiso.onrender.com",
+            "gh": "https://github.com/JockaMt/Visione_del_paradiso",
+            "categories": [
+                "fullstack"
             ],
             "technologies": [
                 "HTML",
+                "Python",
+                "JavaScript",
+                "Mako",
+                "Dockerfile"
+            ]
+        },
+        {
+            "name": "django-crud",
+            "description": "Sistema web desenvolvido com Django para o gerenciamento de clientes e serviços em uma oficina de motos.",
+            "url": "",
+            "gh": "https://github.com/JockaMt/django-crud",
+            "categories": [
+                "fullstack"
+            ],
+            "technologies": [
+                "Python",
                 "CSS",
+                "HTML"
+            ]
+        },
+        {
+            "name": "controle-financeiro",
+            "description": "Aplicação web desenvolvida com React.js para controle de finanças pessoais. Permite registrar entradas e saídas financeiras, exibindo um resumo atualizado em tempo real.",
+            "url": "",
+            "gh": "https://github.com/JockaMt/controle-financeiro",
+            "categories": [
+                "other"
+            ],
+            "technologies": [
+                "JavaScript",
+                "HTML"
+            ]
+        },
+        {
+            "name": "calculadora-de-peso-de-ouro",
+            "description": "Aplicação desktop moderna para calcular pesos de metais preciosos com interface PySide6.",
+            "url": "",
+            "gh": "https://github.com/JockaMt/calculadora-de-peso-de-ouro",
+            "categories": [
+                "other"
+            ],
+            "technologies": [
+                "Python"
+            ]
+        },
+        {
+            "name": "rickandmorty-viewer",
+            "description": "Aplicação web para visualizar personagens e informações do universo de Rick and Morty, consumindo a The Rick and Morty API.",
+            "url": "",
+            "gh": "https://github.com/JockaMt/rickandmorty-viewer",
+            "categories": [
+                "other"
+            ],
+            "technologies": [
                 "TypeScript",
-                "Rust"
+                "CSS",
+                "JavaScript",
+                "HTML"
             ]
         },
         {
-            "name": "Real Maker Studio",
-            "description": "Site institucional de um estúdio de criação de jogos indie.",
+            "name": "vorp-friends",
+            "description": "Uma rede social moderna",
+            "url": "",
+            "gh": "https://github.com/JockaMt/vorp-friends",
+            "categories": [
+                "other"
+            ],
+            "technologies": [
+                "TypeScript",
+                "CSS"
+            ]
+        },
+        {
+            "name": "realmakerstudio-site",
+            "description": "\"Landing page e vitrine oficial da Realmakerstudio, um estúdio indie focado em jogos de pixelart.\"",
             "url": "https://realmakersitepublic-rouge.vercel.app/",
-            "gh": "",
-            "categories": [
-                "frontend"
-            ],
-            "technologies": [
-                "HTML",
-                "CSS",
-                "JavaScript",
-                "TypeScript"
-            ]
-        },
-        {
-            "name": "Login Page responsiva",
-            "description": "Página de login responsiva feita com HTML e CSS.",
-            "url": "https://responsive-login-screen.vercel.app/",
-            "gh": "https://github.com/JockaMt/fullstack-project",
-            "categories": [
-                "frontend",
-                "backend",
-                "fullstack"
-            ],
-            "technologies": [
-                "HTML",
-                "CSS",
-                "JavaScript",
-                "TypeScript"
-            ]
-        },
-        {
-            "name": "Ghost and Blocks",
-            "description": "Jogo simples feito na godot onde o jogador controla um fantasma desviando de blocos.",
-            "url": "https://jockaplay.itch.io/ghost-and-blocks",
-            "gh": "https://github.com/JockaMt/GhostAndBlocks",
+            "gh": "https://github.com/JockaMt/realmakerstudio-site",
             "categories": [
                 "other"
             ],
             "technologies": [
-                "Godot",
-                "GDScript"
-            ]
-        },
-        {
-            "name": "Django IBGE",
-            "description": "Buscador de cidades via dados do IBGE feito com Django.",
-            "url": "",
-            "gh": "https://github.com/JockaMt/DjangoIBGE",
-            "categories": [
-                "frontend",
-                "backend",
-                "fullstack"
-            ],
-            "technologies": [
-                "HTML",
+                "TypeScript",
                 "CSS",
                 "JavaScript",
-                "Python",
-                "Django"
+                "HTML"
             ]
         },
         {
-            "name": "Bot Discord",
-            "description": "Bot para Discord feito com javascript.",
+            "name": "chat-grpc",
+            "description": "Sistema de chat simples usando gRPC, uma estrutura de chamada de procedimento remoto (RPC) moderna e eficiente.",
             "url": "",
-            "gh": "https://github.com/JockaMt/bot-discord",
+            "gh": "https://github.com/JockaMt/chat-grpc",
+            "categories": [
+                "other"
+            ],
+            "technologies": [
+                "Python"
+            ]
+        },
+        {
+            "name": "rotinas-app",
+            "description": "A Schedule made in React Native for personal use.",
+            "url": "",
+            "gh": "https://github.com/JockaMt/rotinas-app",
             "categories": [
                 "other"
             ],
@@ -91,72 +137,133 @@
             ]
         },
         {
-            "name": "Rick and Morty",
-            "description": "Lista de personagens de Rick and Morty consumindo a API oficial.",
+            "name": "buscador-de-empresas-em-deficit",
+            "description": "buscador de empresas",
             "url": "",
-            "gh": "https://github.com/JockaMt/rickandmortyapiconsumer",
+            "gh": "https://github.com/JockaMt/buscador-de-empresas-em-deficit",
             "categories": [
-                "frontend"
+                "other"
             ],
             "technologies": [
-                "HTML",
-                "CSS",
+                "Python"
+            ]
+        },
+        {
+            "name": "bot-para-discord",
+            "description": "Primeiro bot de discord feito por mim :3",
+            "url": "",
+            "gh": "https://github.com/JockaMt/bot-para-discord",
+            "categories": [
+                "other"
+            ],
+            "technologies": [
                 "JavaScript"
             ]
         },
         {
-            "name": "Alagoas Mais Limpa",
-            "description": "(Em manutenção) Projeto de conscientização ambiental para o estado de Alagoas.",
-            "url": "https://alagoas-mais-limpa-site-25ed5c.gitlab.io/",
-            "gh": "",
+            "name": "lista-de-tarefas",
+            "description": "A to do list made with javascript.",
+            "url": "https://jockaplay-todolist.netlify.app/",
+            "gh": "https://github.com/JockaMt/lista-de-tarefas",
             "categories": [
-                "fullstack"
+                "other"
             ],
             "technologies": [
-                "HTML",
                 "CSS",
                 "JavaScript",
-                "Python",
-                "Django"
+                "HTML"
             ]
         }
     ],
     "cartegories": [
-        "frontend",
-        "backend",
         "fullstack",
         "other"
     ],
     "technologies": [
-        "HTML",
         "CSS",
+        "Dockerfile",
+        "HTML",
         "JavaScript",
-        "TypeScript",
+        "Mako",
         "Python",
-        "Django",
-        "Godot",
-        "GDScript"
+        "TypeScript"
     ],
     "skills": {
         "Frontend": [
-            { "name": "HTML", "level": 95, "icon": "https://cdn.simpleicons.org/html5" },
-            { "name": "CSS", "level": 85, "icon": "public/icons/css3.svg" },
-            { "name": "JavaScript", "level": 90, "icon": "https://cdn.simpleicons.org/javascript" },
-            { "name": "TypeScript", "level": 75, "icon": "https://cdn.simpleicons.org/typescript" },
-            { "name": "React", "level": 80, "icon": "https://cdn.simpleicons.org/react" }
+            {
+                "name": "HTML",
+                "level": 95,
+                "icon": "https://cdn.simpleicons.org/html5"
+            },
+            {
+                "name": "CSS",
+                "level": 85,
+                "icon": "public/icons/css3.svg"
+            },
+            {
+                "name": "JavaScript",
+                "level": 90,
+                "icon": "https://cdn.simpleicons.org/javascript"
+            },
+            {
+                "name": "TypeScript",
+                "level": 75,
+                "icon": "https://cdn.simpleicons.org/typescript"
+            },
+            {
+                "name": "React",
+                "level": 80,
+                "icon": "https://cdn.simpleicons.org/react"
+            }
         ],
         "Backend": [
-            { "name": "Python", "level": 90, "icon": "https://cdn.simpleicons.org/python" },
-            { "name": "Django", "level": 80, "icon": "https://cdn.simpleicons.org/django" },
-            { "name": "Java", "level": 70, "icon": "public/icons/java.svg" },
-            { "name": "Rust", "level": 60, "icon": "https://cdn.simpleicons.org/rust" }
+            {
+                "name": "Python",
+                "level": 90,
+                "icon": "https://cdn.simpleicons.org/python"
+            },
+            {
+                "name": "Django",
+                "level": 80,
+                "icon": "https://cdn.simpleicons.org/django"
+            },
+            {
+                "name": "Java",
+                "level": 70,
+                "icon": "public/icons/java.svg"
+            },
+            {
+                "name": "Rust",
+                "level": 60,
+                "icon": "https://cdn.simpleicons.org/rust"
+            }
         ],
         "Ferramentas": [
-            { "name": "Git", "level": 90, "icon": "https://cdn.simpleicons.org/git" },
-            { "name": "GitHub", "level": 85, "icon": "https://cdn.simpleicons.org/github" },
-            { "name": "Docker", "level": 70, "icon": "https://cdn.simpleicons.org/docker" },
-            { "name": "Node.js", "level": 80, "icon": "https://cdn.simpleicons.org/nodedotjs" },
-            { "name": "Figma", "level": 65, "icon": "https://cdn.simpleicons.org/figma" }
+            {
+                "name": "Git",
+                "level": 90,
+                "icon": "https://cdn.simpleicons.org/git"
+            },
+            {
+                "name": "GitHub",
+                "level": 85,
+                "icon": "https://cdn.simpleicons.org/github"
+            },
+            {
+                "name": "Docker",
+                "level": 70,
+                "icon": "https://cdn.simpleicons.org/docker"
+            },
+            {
+                "name": "Node.js",
+                "level": 80,
+                "icon": "https://cdn.simpleicons.org/nodedotjs"
+            },
+            {
+                "name": "Figma",
+                "level": 65,
+                "icon": "https://cdn.simpleicons.org/figma"
+            }
         ]
     }
 }
