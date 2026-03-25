@@ -59,6 +59,45 @@ function getProjectLinkIndicator(project) {
     `;
 }
 
+
+async function fetchHistoryTimeline() {
+    const response = await fetch('./history.json');
+
+    if (!response.ok) {
+        throw new Error(`Falha ao carregar history.json: ${response.status}`);
+    }
+
+    return response.json();
+}
+
+function renderHistoryTimeline(historyItems = []) {
+    const timelineContainer = document.getElementById('about-timeline');
+    if (!timelineContainer) {
+        return;
+    }
+
+    timelineContainer.innerHTML = '';
+
+    historyItems.forEach((item) => {
+        const timelineItem = document.createElement('article');
+        timelineItem.className = 'timeline-item';
+        timelineItem.setAttribute('role', 'listitem');
+
+        const tags = (item.tags || [])
+            .map((tag) => `<span class="timeline-tag">${tag}</span>`)
+            .join('');
+
+        timelineItem.innerHTML = `
+            <p class="timeline-date">${item.date || ''}</p>
+            <h4 class="timeline-title">${item.title || 'Sem título'}</h4>
+            <p class="timeline-description">${item.description || ''}</p>
+            <div class="timeline-tags" aria-label="Tecnologias e temas">${tags}</div>
+        `;
+
+        timelineContainer.appendChild(timelineItem);
+    });
+}
+
 function getTechnologiesMarquee(technologies = []) {
     if (!technologies.length) {
         return '';
@@ -107,6 +146,14 @@ function getTechnologiesBadges(technologies = []) {
         `
         : '';
 
+
+    fetchHistoryTimeline()
+        .then((historyItems) => {
+            renderHistoryTimeline(Array.isArray(historyItems) ? historyItems : []);
+        })
+        .catch((error) => {
+            console.error('Error loading history timeline:', error);
+        });
     return `
         <div class="technologies" aria-label="Tecnologias utilizadas: ${shuffledTechnologies.join(', ')}">
             ${badges}

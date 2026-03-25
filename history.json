@@ -1,0 +1,66 @@
+[
+  {
+    "date": "2020 - 2021",
+    "title": "Fundamentos em desenvolvimento",
+    "description": "Formação autodidata em programação, lógica e desenvolvimento de aplicações iniciais, consolidando bases técnicas.",
+    "tags": [
+      "Lógica de Programação",
+      "JavaScript",
+      "HTML",
+      "CSS",
+      "Algoritmos"
+    ]
+  },
+  {
+    "date": "2022 - 2023",
+    "title": "Especialização em Backend",
+    "description": "Desenvolvimento de APIs escaláveis, autenticação com JWT, aplicação de princípios SOLID e criação de sistemas seguros.",
+    "tags": [
+      "Node.js",
+      "NestJS",
+      "APIs REST",
+      "JWT",
+      "SOLID",
+      "Segurança"
+    ]
+  },
+  {
+    "date": "2023 - 2024",
+    "title": "Sistemas e aplicações completas",
+    "description": "Desenvolvimento de soluções completas, incluindo sistemas de licenciamento, aplicações desktop e integração fullstack.",
+    "tags": [
+      "Fullstack",
+      "React",
+      "Tauri",
+      "Licenciamento",
+      "Auto Update",
+      "JSON"
+    ]
+  },
+  {
+    "date": "2024 - 2025",
+    "title": "Dados, automação e soluções comerciais",
+    "description": "Atuação com processamento de dados em larga escala, automação com bots e desenvolvimento de soluções voltadas para negócio.",
+    "tags": [
+      "Django",
+      "Python",
+      "ETL",
+      "Chatbot",
+      "WhatsApp API",
+      "Automação"
+    ]
+  },
+  {
+    "date": "2025 - Atual",
+    "title": "Produtos digitais e inovação",
+    "description": "Foco em criação de produtos digitais, desenvolvimento de jogos e soluções escaláveis com visão de negócio e monetização.",
+    "tags": [
+      "C++",
+      "Android NDK",
+      "Game Dev",
+      "SaaS",
+      "Startup",
+      "Escalabilidade"
+    ]
+  }
+]
