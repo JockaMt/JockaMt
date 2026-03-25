@@ -889,12 +889,9 @@ header nav ul li a:hover {
 /* Rodapé */
 footer {
     padding: 2.4rem 1.5rem 1.2rem;
-    background:
-        radial-gradient(circle at 8% 0%, rgba(0, 122, 204, 0.14), transparent 42%),
-        radial-gradient(circle at 90% 100%, rgba(0, 95, 158, 0.16), transparent 42%),
-        linear-gradient(180deg, #ffffff 0%, #f2f8ff 100%);
-    color: #2a3a4a;
-    border-top: 1px solid #d6e8f7;
+    background: #fff;
+    color: #333;
+    border-top: 1px solid #eaeaea;
 }
 
 .footer-shell {
@@ -914,18 +911,18 @@ footer {
     margin-bottom: 0.6rem;
     font-size: 1.45rem;
     line-height: 1.25;
-    color: #11324f;
+    color: #111;
 }
 
 .footer-brand p {
     max-width: 45ch;
-    color: #476178;
+    color: #555;
 }
 
 .footer-quick-links h4,
 .footer-contact h4 {
     margin-bottom: 0.65rem;
-    color: #11324f;
+    color: #111;
 }
 
 .footer-quick-links nav {
@@ -935,19 +932,18 @@ footer {
 }
 
 .footer-quick-links a {
-    color: #3f5d78;
+    color: #555;
     text-decoration: none;
     width: fit-content;
-    transition: color 0.2s ease, transform 0.2s ease;
+    transition: color 0.2s ease;
 }
 
 .footer-quick-links a:hover {
     color: #007acc;
-    transform: translateX(3px);
 }
 
 .footer-email {
-    color: #2f5f86;
+    color: #555;
     text-decoration: none;
     font-weight: 500;
 }
@@ -971,8 +967,8 @@ footer {
     width: 2.5rem;
     height: 2.5rem;
     border-radius: 5px;
-    border: 1px solid #c8dff3;
-    background: rgba(255, 255, 255, 0.8);
+    border: 1px solid #e1e7ee;
+    background: #fff;
     transition: border-color 0.2s ease, background-color 0.2s ease, transform 0.2s ease;
 }
 
@@ -987,9 +983,8 @@ footer {
 }
 
 .contact-item:hover {
-    border-color: #89c5f4;
-    background: #eaf5ff;
-    transform: translateY(-2px);
+    border-color: #bfdcff;
+    background: #f4f9ff;
 }
 
 .contact-item:hover .footer-icon {
@@ -1031,7 +1026,7 @@ footer {
 .footer-bottom {
     margin-top: 1.6rem;
     padding-top: 1rem;
-    border-top: 1px dashed #c8dff3;
+    border-top: 1px solid #eaeaea;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -1039,13 +1034,13 @@ footer {
 }
 
 .footer-bottom p {
-    color: #51697f;
+    color: #666;
     margin: 0;
     font-size: 0.95rem;
 }
 
 .footer-back-top {
-    color: #2f5f86;
+    color: #555;
     text-decoration: none;
     font-weight: 600;
     transition: color 0.2s ease;
