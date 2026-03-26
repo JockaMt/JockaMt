@@ -1,6 +1,20 @@
 {
     "projects": [
         {
+            "name": "Jockamt",
+            "description": "Repositório desde portifólio, meu projeto de site pessoal e readme personalizado.",
+            "url": "https://jockamt.github.io/JockaMt/",
+            "gh": "https://github.com/JockaMt/JockaMt",
+            "categories": [
+                "frontend"
+            ],
+            "technologies": [
+                "CSS",
+                "JavaScript",
+                "HTML"
+            ]
+        },
+        {
             "name": "Lista De Tarefas",
             "description": "(Em manutenção) Lista de tarefas simples",
             "url": "https://jockaplay-todolist.netlify.app/",
@@ -113,20 +127,6 @@
             ],
             "technologies": [
                 "TypeScript",
-                "CSS",
-                "JavaScript",
-                "HTML"
-            ]
-        },
-        {
-            "name": "Jockamt",
-            "description": "Meu repositório pessoal!",
-            "url": "https://jockamt.github.io/JockaMt/",
-            "gh": "https://github.com/JockaMt/JockaMt",
-            "categories": [
-                "frontend"
-            ],
-            "technologies": [
                 "CSS",
                 "JavaScript",
                 "HTML"
