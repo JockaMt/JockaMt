@@ -1,20 +1,6 @@
 {
     "projects": [
         {
-            "name": "Django Crud",
-            "description": "Sistema web desenvolvido com Django para o gerenciamento de clientes e serviços em uma oficina de motos.",
-            "url": "",
-            "gh": "https://github.com/JockaMt/django-crud",
-            "categories": [
-                "fullstack"
-            ],
-            "technologies": [
-                "Python",
-                "CSS",
-                "HTML"
-            ]
-        },
-        {
             "name": "Jockamt",
             "description": "Repositório desde portifólio, meu projeto de site pessoal e readme personalizado.",
             "url": "https://jockamt.github.io/JockaMt/",
@@ -25,6 +11,20 @@
             "technologies": [
                 "CSS",
                 "JavaScript",
+                "HTML"
+            ]
+        },
+        {
+            "name": "Django Crud",
+            "description": "Sistema web desenvolvido com Django para o gerenciamento de clientes e serviços em uma oficina de motos.",
+            "url": "",
+            "gh": "https://github.com/JockaMt/django-crud",
+            "categories": [
+                "fullstack"
+            ],
+            "technologies": [
+                "Python",
+                "CSS",
                 "HTML"
             ]
         },
