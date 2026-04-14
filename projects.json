@@ -1,6 +1,19 @@
 {
     "projects": [
         {
+            "name": "Api Ecommerce",
+            "description": "Uma API em NestJS para um SaaS de e-commerce multi-tenant.",
+            "url": "",
+            "gh": "https://github.com/JockaMt/api-ecommerce",
+            "categories": [
+                "backend"
+            ],
+            "technologies": [
+                "TypeScript",
+                "JavaScript"
+            ]
+        },
+        {
             "name": "Jockamt",
             "description": "Repositório desde portifólio, meu projeto de site pessoal e readme personalizado.",
             "url": "https://jockamt.github.io/JockaMt/",
@@ -12,19 +25,6 @@
                 "CSS",
                 "JavaScript",
                 "HTML"
-            ]
-        },
-        {
-            "name": "Api Ecommerce",
-            "description": "Uma API em NestJS para um SaaS de e-commerce multi-tenant.",
-            "url": "",
-            "gh": "https://github.com/JockaMt/api-ecommerce",
-            "categories": [
-                "backend"
-            ],
-            "technologies": [
-                "TypeScript",
-                "JavaScript"
             ]
         },
         {
