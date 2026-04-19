@@ -110,7 +110,7 @@ header nav ul li a:hover {
     display: flex;
     align-items: center;
     /* Evita o header sobrepor o conteúdo em ancoragem e pequenas telas */
-    min-height: calc(100vh - var(--header-h));
+    min-height: 65vh;
     padding: 4rem 2rem;
     /* Reduzido */
     background: #ffffff;
@@ -241,7 +241,7 @@ header nav ul li a:hover {
     min-width: 300px;
     text-align: center;
     display: flex;
-    justify-content: center;
+    justify-content: end;
     align-items: center;
 }
 
@@ -528,7 +528,7 @@ header nav ul li a:hover {
     text-decoration: none;
     border-radius: 5px;
     font-weight: 600;
-    text-align: center  ;
+    text-align: center;
     transition: background-color 0.3s ease, transform 0.2s ease;
     width: 100%;
 }
@@ -1119,6 +1119,7 @@ footer {
         opacity: 0;
         transform: translateY(16px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -1140,6 +1141,7 @@ footer {
         opacity: 1 !important;
         transform: none !important;
     }
+
     .fade-section.visible {
         animation: none !important;
     }
@@ -1166,7 +1168,9 @@ footer {
 
 /* Responsividade */
 @media (max-width: 768px) {
-    :root { --header-h: 112px; }
+    :root {
+        --header-h: 112px;
+    }
 
     header {
         padding: 0.7rem 0;
@@ -1214,7 +1218,7 @@ footer {
         flex-direction: column-reverse;
         text-align: center;
         /* Mais espaço no topo para não colidir com o header empilhado */
-        padding: calc(2rem + 8px) 1.25rem 2.5rem;
+        /* padding: calc(2rem + 8px) 1.25rem 2.5rem; */
         min-height: calc(92vh - var(--header-h));
     }
 
@@ -1235,9 +1239,14 @@ footer {
 
     .hero-content-left,
     .hero-content-right {
+        justify-content: center;
         flex: 0 0 100%;
         min-width: 0;
         width: 100%;
+    }
+
+    .hero-content-right {
+        align-items: center;
     }
 
     .hero-content-left h1 {
@@ -1263,7 +1272,7 @@ footer {
         margin-bottom: 1.4rem;
     }
 
-    .hero-content-left .btn{
+    .hero-content-left .btn {
         flex: 1;
         width: 100%;
     }
@@ -1352,11 +1361,11 @@ footer {
 
 /* Tablet */
 @media (max-width: 1024px) and (min-width: 769px) {
-    .hero-content-left .btn{
+    .hero-content-left .btn {
         flex: 1;
         width: 100%;
     }
-    
+
     /* Ajustes para badges em tablet */
     .skills-badges {
         gap: 0.8rem;
@@ -1368,4 +1377,6 @@ footer {
 }
 
 /* Garante offset por seção ao usar links com # âncora */
-section { scroll-margin-top: var(--header-h); }
+section {
+    scroll-margin-top: var(--header-h);
+}
