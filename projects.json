@@ -1,18 +1,6 @@
 {
     "projects": [
         {
-            "name": "Calculadora De Peso De Ouro",
-            "description": "Aplicação desktop moderna para calcular pesos de metais preciosos com interface PySide6.",
-            "url": "",
-            "gh": "https://github.com/JockaMt/calculadora-de-peso-de-ouro",
-            "categories": [
-                "frontend"
-            ],
-            "technologies": [
-                "Python"
-            ]
-        },
-        {
             "name": "Jockamt",
             "description": "Repositório desde portifólio, meu projeto de site pessoal e readme personalizado.",
             "url": "https://jockamt.github.io/JockaMt/",
@@ -24,6 +12,18 @@
                 "CSS",
                 "JavaScript",
                 "HTML"
+            ]
+        },
+        {
+            "name": "Calculadora De Peso De Ouro",
+            "description": "Aplicação desktop moderna para calcular pesos de metais preciosos com interface PySide6.",
+            "url": "",
+            "gh": "https://github.com/JockaMt/calculadora-de-peso-de-ouro",
+            "categories": [
+                "frontend"
+            ],
+            "technologies": [
+                "Python"
             ]
         },
         {
